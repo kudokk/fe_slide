@@ -30,9 +30,12 @@
   </ul>
   <img src="./img/nodejs.png" width="100">
 </div>
-<p>フロントエンドの環境構築のために, nodeをインストールしますが、何者なのか？</p>
-<p><span class="-b">Node.js本体</span>です</p>
-<p>フロントエンドの環境はNode.jsによって動いていると覚えておいてください。</p>
+<p>フロントエンドの環境構築のために, nodeをインストールしますが、<br>何者なのか？</p>
+<div class="-mt8 fragment">
+  <p class="-big"><span class="-b">Node.js本体</span>です</p>
+  <p>また、nodenvは、Node.jsのバージョン管理ツールです。</p>
+  <p><span class="-b">フロントエンドの環境はNode.jsによって動いている</span>と覚えておいてください。</p>
+</div>
 
 --
 
@@ -382,7 +385,7 @@ gulpとは (特徴)
 </div>
 
 gulp(gulpfile.js)の設定方法①  
-タスクの登録について
+タスクの登録について(git clone http://gitlab102.gnavi.co.jp/skilltrans-fe/skilltrans-fe_201904_test.git)
 
 
 ```js
@@ -418,7 +421,7 @@ gulp(gulpfile.js)の設定方法②<br>
 
 ```js
 //npmモジュールのrun-sequenceを読みこむ
-import runSequence from 'run-sequence';
+var runSequence =  require('run-sequence');
 //[]で記述することで非同期処理をしていく
 // build
 gulp.task('build', (callback) => {
@@ -430,6 +433,7 @@ gulp.task('default', (callback) => {
   runSequence('build',callback);
 });
 ```
+タスクは、gulp taskNameで実行できますが、  
 gulpの標準機能として、defaultタスクは、「gulp」のみで実行できるようになっています。
 
 -- 
@@ -507,7 +511,8 @@ webpackとは
   </ul>
 </div>
 
-webpack(webpack.config.js)の設定方法
+webpack(webpack.config.js)の設定方法  
+gnavi-npm-scripts-boiler-pugリポジトリのconf/webpack.js
 
 ```js
 // output.pathに絶対パスを指定する必要があるため、pathモジュールを読み込んでおく
