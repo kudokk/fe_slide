@@ -1,0 +1,48 @@
+@import './foundation/_reset.scss';
+@import './foundation/_base.scss';
+
+.issue {
+  h1 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  line-height: 1.7;
+}
+
+section {
+  margin: 20px;
+}
+
+.rule-list {
+  margin: 20px 0;
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    display: flex;
+    margin: 8px 0;
+    &::before {
+      content: '・';
+    }
+  }
+}
+
+#no03 {
+  p {
+    color: #f44;
+    font-size: 1.4rem;
+  }
+  table {
+    border: 1px solid #333;
+    margin: 20px;
+    tr:nth-child(even) {
+      background-color: #ddd;
+    }
+    th,
+    td {
+      border: 1px solid #333;
+      color: #444;
+      padding: 4px 8px;
+    }
+  }
+}
