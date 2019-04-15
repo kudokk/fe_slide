@@ -232,7 +232,7 @@ package.jsonのscriptsに記載したものは、コマンドとして実行で�
 ```shell
 $ npm run test
 ```
-<p class="-mt24">ターミナルに上記のエラーが出力されてかと思います。</p>
+<p class="-mt24">ターミナルに上記のエラーが出力されているかと思います。</p>
 <p></p>
 
 -- 
@@ -620,8 +620,8 @@ module.exports = {
 
 <div class="-mt36">
   - data: <span class="-n">データ（文字列）をjson形式で管理します。</span>
-  - layout: <span class="-n">pageのhbsファイル毎の共通部分(header, footer周辺)を定義。</span>
-  - pages: <span class="-n">page毎のhbsファイル。ここで定義したhbsファイル名がそのままhtmlになるイメージです。</span>
+  - layout: <span class="-n">全pageの共通部分(header, footer周辺)を定義。</span>
+  - pages: <span class="-n">page毎のファイル。ここで定義した1ファイルがそのまま1htmlになるイメージです。</span>
   - partials: <span class="-n">自分で定義したモジュール</span>
 </div>
 <p>※設定次第で、ディレクトリ名を変更することはできます。</p>
@@ -756,7 +756,7 @@ search_type: rs
   </ul>
 </div>
 
-・記法(sample.ejs)
+・記法(ejs/pages/sample.ejs)
 
 ```html
   <!DOCTYPE html>
@@ -772,14 +772,14 @@ search_type: rs
 <%- include('../partials/gnHeader', {header: 2}); %>①
 <%# タイトル -%>  ②
 <h1 class="title">
-  <span class="title__main"><%= data.genre.title.main %></span>  ③
-  <span class="title__sub"><%= data.genre.title.sub %></span>
+  <span class="title__main"><%= data.title.main %></span>  ③
+  <span class="title__sub"><%= data.title.sub %></span>
 </h1>
 </body>
 ```
   <p>①partialの読み込み。パラメータを付与することも可能です。</p>
   <p>②コメントアウト用の記法で、htmlにも出力されません！</p>
-  <p>③jsonファイルからデータを取得しています。data.genreはgulpfile.js内で定義してあります。</p>
+  <p>③jsonファイルからデータを取得しています。dataはgulpfile.js内で定義してあります。</p>
 
 -- 
 
@@ -790,15 +790,20 @@ search_type: rs
   </ul>
 </div>
 
-・記法(sample.ejs)
+・記法(ejs/pages/sample.ejs)
 
-<%  %>とすればjacascriptも記載できますので...
+<%  %>とすればjavascriptも記載できますので...
 ```html
 <% array.forEach(function (value, index) { %>
 <%= value.hoge %>
 <% }) %>
 ```
 <p class="fragment">編集ピックアップ（リスト系リンク）をforEachで出力してみましょう！</p>
+<div class="fragment">
+<p>array: jsonにおける配列名を指定</p>
+<p>value: 値を得られる</p>
+<p>index: index番号を得られる</p>
+</div>
 <p class="fragment">※ejsのpages配下のファイルには、yamlでパラメータを持たせることができませんので、jsonのプロパティの有無でif判定していくことになります。</p>
 --  
 
@@ -809,7 +814,7 @@ search_type: rs
   </ul>
 </div>
 
-記法(layout/default.pug)
+記法(gnavi-npm-scripts-boiler-pugリポジトリのsrc/pug/layout/default.pug)
 ```html
 doctype html  ①
 html(lang=ja) ②
@@ -838,7 +843,8 @@ html(lang=ja) ②
   </ul>
 </div>
 
-CSSのビルドについて
+CSSのビルドについて  
+gulp-boilerplate-switchTask/gulp/task/sass.js
 
 -- 
 
@@ -991,7 +997,7 @@ var fuga = function() {
 
 <p>JavaScriptファイルの圧縮を担っています。</p>
 <p>JavaScriptもどれくらい圧縮されるのかみてみましょう。</p>
-<p class="fragment">dist/js/lp.js: <span class="-b">46 KB</span> dist/js/lp.min.js: <span class="-b">14 KB</span></p>
+<p class="fragment">dist/js/lp.js: <span class="-b">12 KB</span> dist/js/lp.min.js: <span class="-b">6 KB</span></p>
 
 <p class="fragment">dist/js/lp.min.js内を見てみると,<span class="-b">t</span>, <span class="-b">n</span>, <span class="-b">o</span>などがありませんか？<br>これは、変数名や関数名を１文字に圧縮しているためです。</p>
 
@@ -1005,8 +1011,10 @@ var fuga = function() {
   </ul>
 </div>
 
-<p>モジュール化されたejsファイル, cssファイル, jsファイルに変更を加えると、ブラウザが自動的に読み込み直されていませんでしたか？</p>
+<p>モジュール化されたejsファイル, scssファイル, jsファイルに変更を加えると、ブラウザが自動的に読み込み直されていませんでしたか？</p>
 <p>それがwatch, browsersyncの恩恵です。</p>
+
+<p>skilltrans-fe_201904_testリポジトリのgulpfile.js</p>
 
 -- 
 
@@ -1017,7 +1025,7 @@ var fuga = function() {
   </ul>
 </div>
 
-<p>変更を検知して、タスクを実行するモジュールです。</p>
+<p>変更を検知して、タスクを実行するモジュールです。(gulpfile.js334行目)</p>
 
 ```js
 /*
