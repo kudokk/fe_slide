@@ -185,6 +185,15 @@ https://caniuse.com/
 <p class="fragment">実際に const で検索してみてください。</p>
 <p>IE6〜10はNot supportedで対応外、IE11は使用できることがご確認できるかと思います。<br>また、AndroidBrowserの3〜4.4.4は、条件付きの対応です。</p>
 
+-- 
+
+#### 特徴4: バージョン(ES5, ES201X)
+
+<p class="-mb24 -small">ちなみに...弊社のサポートブラウザ</p>
+
+https://www.gnavi.co.jp/  
+ぐるなびTOPの最下部にある 利用条件 リンクをクリックして遷移してみてください。
+
 --- 
 
 #### 特徴5: 開発者モードでも確認できる

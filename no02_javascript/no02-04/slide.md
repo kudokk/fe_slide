@@ -147,7 +147,7 @@ console.log(hoge) //hoge is not defined
 })(jQuery)
 ```
 
----
+--
 
 <p class="-ex-mb24">いろいろ書きましたが…</p>
 ##### これからは基本的にアロー関数で書きましょう！
@@ -155,6 +155,52 @@ console.log(hoge) //hoge is not defined
 アロー関数の方が読みやすいので、アロー関数を使用することをオススメします。  
 いちいちfunctionと書くのも面倒ですし。  
 アロー関数における細かいthisの挙動については、一旦保留します。
+
+---
+
+#### JSの関数の特徴
+
+- 引数の数と型は区別しない
+- 同名関数の場合
+
+-- 
+
+#### JSの関数の特徴
+
+<p class="-ex-mb24">引数の数と型は区別しない</p>
+
+```js
+function hogehoge(fuga, foo) {
+  console.log('引数が２つ必要なhogehogeメソッド')
+}
+
+hogehoge()
+hogehoge('a')
+hogehoge('a', 'b')
+hogehoge('a', 1, 2)
+```
+引数の数や型に関係なく、同名の関数であれば呼び出すことが可能です。
+
+-- 
+
+#### JSの関数の特徴
+
+<p class="-ex-mb24">同名関数の場合</p>
+
+```js
+function hogehoge() {
+  console.log('1つ目のhogehogeメソッド')
+}
+function hogehoge(fuga) {
+  console.log('2つ目のhogehogeメソッド')
+}
+function hogehoge(fuga, foo) {
+  console.log('3つ目のhogehogeメソッド')
+}
+
+hogehoge()
+```
+同名の関数が複数、定義されていると、最後に定義された関数が呼び出されます。
 
 ---
 
