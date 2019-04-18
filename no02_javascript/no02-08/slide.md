@@ -133,11 +133,10 @@ console.log(listItem) // HTMLCollectionという"配列っぽいオブジェク�
 ```
 --
 
-#### getElementsByClassName()と_.forEach()
+#### getElementsByClassName()とforEach()
 
 getElementsByClassName()で返却される値は「配列」ではなく、<b class="-u">「配列っぽいオブジェクト」</b>です。  
-つまり、<b class="-u">配列の章で学んだArray.prototype.forEach()を使って処理をすることはできません。</b>  
-そのため、lodashというライブラリのforEach()を使って処理をすることがしばしばあります。
+つまり、<b class="-u">配列の章で学んだArray.prototype.forEach()を使って処理をすることはできません。</b>
 
 
 <span class="-small">HTML<span>
@@ -151,7 +150,9 @@ getElementsByClassName()で返却される値は「配列」ではなく、<b cl
 <span class="-small">JS<span>
 ```js
 const listItem = document.getElementsByClassName('js-list-item')
-listItem.forEach(item => console.log(item.textContent)) //forEach is not a function
+listItem.forEach((item) => {
+  console.log(item.innerHTML) //forEach is not a function
+})
 ```
 --
 
@@ -208,8 +209,8 @@ document.querySelector(".foo input[name='hoge']")
 --
 #### ⑤document.querySelectorAll()
 
-document.querySelectorAll()は<b class="-u">引数に指定したcssセレクタ</b>にマッチする、文書中の要素のリストを示す静的な（生きていない）<b class="-u">NodeList</b>を返します。  
-もし、指定したcssセレクタが何もマッチしなくても、空のNodeListを返します。(※nullではありません)
+document.querySelectorAll()は<b class="-u">引数に指定したセレクタ</b>にマッチする、文書中の要素のリストを示す静的な（生きていない）<b class="-u">NodeList</b>を返します。  
+もし、指定したセレクタが何もマッチしなくても、空のNodeListを返します。(※nullではありません)
 
 
 <span class="-small">HTML<span>
@@ -542,3 +543,14 @@ clickイベントの制御は、行うことが多いですので、stopPropagat
 - HTMLCollection, NodeListなどの返却値の型を把握し、空のときの挙動も覚えましょう。
 - プロジェクトでDOM操作を行うときは、操作対象がなかったときにエラーを出さないような工夫をしましょう。
 - 各種イベントの発火タイミングを知り、イベントリスナーの登録、イベント制御の方法も覚えましょう。
+
+-- 
+
+##### 余裕があれば課題
+環境: skilltrans-fe_201904_testリポジトリ, src/js/test_transfer.js
+
+- 課題1  
+button,button2というボタンが用意されていますが、<br>「button」をクリックしたら、「button2」が「ボタン」に変更されるようにしてください。<br>要素のテキストは 要素.innerText で取得できます。
+
+- 課題2  
+panelクラスのある要素がaタグになっています。<br>このaタグのページ遷移イベントを止めて、googleのホームに遷移させてください。
