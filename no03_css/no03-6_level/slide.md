@@ -26,22 +26,22 @@ CSSにはセレクタの指定方法と記述の順番により、CSSプロパ�
 #### カスケード式であること
 
 ```css
-.js-list-item {
+.pseudo__item {
   color: white;
 }
 
-.js-list-item {
+.pseudo__item {
   color: grey;
 }
 ```
 これでは、下に書いてある文字色: グレーが優先されます。
 
 ```css
-li.js-list-item {
+li.pseudo__item {
   color: white;
 }
 
-.js-list-item {
+.pseudo__item {
   color: grey;
 }
 ```

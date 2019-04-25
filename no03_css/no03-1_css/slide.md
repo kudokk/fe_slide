@@ -1,7 +1,5 @@
 #### #03-1. CSS概要
 
-レガシーな状態からのリファクタリングのお話がありましたが、<br>この講義後もフロントエンドがサポートする予定ですので、その中でサポートさせてください。
-
 <a href="../">戻る</a>
 
 ---
@@ -10,6 +8,7 @@
 
 * CSSとは
 * CSSのバージョン
+* リセット系CSS
 * CSSの表現（ピックアップ）
 * ブラウザにおけるCSSの見方
 
@@ -64,6 +63,23 @@ javascript にバージョンがあるように、<br>CSS も少しずつバー�
 
 ---
 
+#### リセット系CSS
+
+各ブラウザにはデフォルトで、スタイルが適用されています。  
+これらを統一させる役割もったCSSのことです。
+
+--
+
+#### リセット系CSS
+
+- Reset.css: すべてリセットするタイプ
+- Normalize.css: 一部デフォルトのスタイルを利用する
+
+個人的には、全てのブラウザで同様の表示を目指すので、Reset.cssを推してます。  
+例えば、<a href="https://cssreset.com/scripts/eric-meyer-reset-css/">こちら</a>です。
+
+---
+
 #### ちなみに、CSS だけでこんなことができます
 - ①簡単なアイコン
 - ②状態変化時の表現
@@ -75,8 +91,8 @@ javascript にバージョンがあるように、<br>CSS も少しずつバー�
 
 ##### ①簡単なアイコン
 
-<p>ここら辺はCSSでいけそうだなあと感じます。</p>
-<img src="./img/arrow.png">
+<p>いくつかのアイコンはCSSでいけそうだなあと感じます。</p>
+<img src="./img/arrow.png" width="250">
 
 <a href="https://cssicon.space/#/" class="-mt36">CSSによるiconについてまとめているサイト</a>が便利です  
 ・アイコンをクリックすると横にcssの記述例がでてきます。  
@@ -85,8 +101,8 @@ javascript にバージョンがあるように、<br>CSS も少しずつバー�
 -- 
 
 ##### ②状態変化時の表現
-<p>まずは、「スイーツビュッフェ」下のテキストをマウスホバーしてみてください。</p>
-<a href="https://www.enjoytokyo.jp/" class="-small">Let's ENJOY TOKYO</a>
+<p>まずは、「築地うな重『極』」エリアをマウスホバーしてみてください。</p>
+<a href="https://delivery.gnavi.co.jp/premium/?utm_id=prederi_shimei2-161031_pc_g_lis&gclid=EAIaIQobChMItL3c5fTn4QIVgxsqCh3ZjQZiEAAYASAAEgKa7fD_BwE" class="-small">デリバリープレミアム</a>
 <p>このようにその要素の状態に応じて、スタイルを表現できます。</p>  
 
 - visited擬似クラス: 訪問済のリンクにスタイルを適用する
@@ -116,9 +132,8 @@ CSSプロパティとしては下記を使用しています。
 --
 
 #### ブラウザにおけるCSSのデバッグ
-- 特定の要素に適用されているCSSプロパティの見方
-
-https://www.enjoytokyo.jp/
+- 特定の要素に適用されているCSSプロパティの見方  
+<a href="https://delivery.gnavi.co.jp/premium/?utm_id=prederi_shimei2-161031_pc_g_lis&gclid=EAIaIQobChMItL3c5fTn4QIVgxsqCh3ZjQZiEAAYASAAEgKa7fD_BwE">デリバリープレミアム</a>  
 開発者モードのelements欄にて、要素を選択してください。(id="contents_wrap" class="clearfix")  
 <p class="-mt36">Styles欄を見ていただくと、CSSプロパティがいくつかに区切られて出てきます。  
 上にあるほど優先され、上で上書きされているものは取り消し線がついています。  </p>

@@ -22,7 +22,7 @@
   <li>イベントリスナーとイベント</li>
 </ul>
 <br>
-<p>DOM操作は、skilltrans-fe_201902_testリポジトリのmasterブランチで動作確認をお願いいたします。  
+<p>DOM操作は、skilltrans-fe_201904_testリポジトリのmasterブランチで動作確認をお願いいたします。  
 ・html: src/ejs/pages/sample.ejs  
 ・js: src/js/test_tranfer.js</p>
 
@@ -407,7 +407,7 @@ sampleLi.forEach((value, index) => {
 
 <span class="-small">JS<span>
 ```js
-const trigger = document.getElementById('js-trigger')
+const trigger = document.querySelector('.js-trigger')
 
 trigger.addEventListener('click', function() {
   // クリックされた後に処理を実行させる
@@ -529,9 +529,9 @@ event.stopPropagation()メソッドは、その要素のイベント発火後に
 ```javascript
 document.querySelector('.link').addEventListener('click', function(event) {
   event.preventDefault();
-  // googleのトップページではなく、「イベント電播」の検索結果に飛ばす
+  // googleのトップページではなく、「イベント伝播」の検索結果に飛ばす
   const href = document.querySelector('.link').href
-  location.href = href + '/search?q=イベント電播'
+  location.href = href + '/search?q=イベント伝播'
 })
 ```
 clickイベントの制御は、行うことが多いですので、stopPropagation, preventDefaultは使いこなせるようにしておく必要があります。

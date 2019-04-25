@@ -108,7 +108,7 @@ const func = (x) => {
 
 #### eslintの挙動確認
 
-skilltrans-fe_201902_testリポジトリのmasterブランチにて、
+skilltrans-fe_201904_testリポジトリのmasterブランチにて、
 ```shell
 git pull
 npm i

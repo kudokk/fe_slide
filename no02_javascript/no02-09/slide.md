@@ -445,7 +445,7 @@ if (testArr.includes('taro') === true) {
 
 <h2 class="-center">import/export</h2>
 
-言葉だけでは説明が難しいので、skilltrans-fe_201902_testのsrc/js/test_transfer.js, src/js/module/test_transferModule.jsを使用していきます。
+言葉だけでは説明が難しいので、skilltrans-fe_201904_testのsrc/js/test_transfer.js, src/js/module/test_transferModule.jsを使用していきます。
 
 --
 

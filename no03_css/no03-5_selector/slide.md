@@ -7,7 +7,7 @@
 #### もくじ 📝
 
 * セレクタとは
-* idセレクタ・classセレクタ・要素型
+* idセレクタ・classセレクタ・要素型セレクタ
 * 擬似クラス
 * 擬似要素
 * その他のセレクタ
@@ -153,20 +153,31 @@ div {
 
 #### nth-child(n)
 
-first-childは、要素内の最初の子要素ですが、<br>nth-child(n)で「要素内のn番目の要素」を指定することができます。  
-また、nth-child(odd)で奇数要素, nth-child(even)で偶数要素を指定することができます。  
+first-childは、要素内の最初の子要素ですが、<br>nth-of-type(n)で「要素内のn番目の要素」を指定することができます。  
+また、nth-of-type(odd)で奇数要素, nth-of-type(even)で偶数要素を指定することができます。  
 ```html
 <ul class="js-list">
   <li class="js-list-item">要素1</li>
-  <li class="js-list-item">要素2</li>  <!-- js-list-item:nth-child(even) -->
+  <li class="js-list-item">要素2</li>  <!-- js-list-item:nth-of-type(even) -->
   <li class="js-list-item">要素3</li>
-  <li class="js-list-item">要素4</li>  <!-- js-list-item:nth-child(even) -->
+  <li class="js-list-item">要素4</li>  <!-- js-list-item:nth-of-type(even) -->
   <li class="js-list-item">要素5</li>
 <ul>
 ```
-<img src="./img/psedo_class.png" width="400">
+<img src="./img/pseudo_class.png" width="400">
 
 他にも、<a href="https://qiita.com/ituki_b/items/62a752389385de7ba4a2">何番目系の便利なCSSまとめ</a>という記事に便利な指定方法が記載されていますので、ご参照ください。
+
+-- 
+
+#### 擬似クラス課題
+
+pseudo__itemクラスに対して、nth-of-typeを使用することで下記の状態を作成してください。  
+(要素間にborderを指定していただきたいです。)  
+/Users/kudo-k/git/skilltrans-fe_201904_testリポジトリのsrc/sass/module/_testTransfer.scssファイルを編集
+
+<img src="./img/nthoftype.png" width="500">
+
 
 ---
 

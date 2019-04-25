@@ -384,8 +384,8 @@ const person = {
   age: 24
 };
 
-console.log(tokyoDisneyLand.name) // kudo
-console.log(tokyoDisneyLand['name']) // kudo
+console.log(person.name) // kudo
+console.log(person['name']) // kudo
 
 ```
 
@@ -405,7 +405,7 @@ console.log(person.name) // kudo
 console.log(person['name']) // kudo
 
 // プロパティ名(key名)を変数で扱う場合
-const hoge = 'kudo'
+const hoge = 'name'
 console.log(person.hoge) // undefined
 console.log(person[hoge]) // kudo
 ```

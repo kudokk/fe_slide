@@ -21,7 +21,7 @@
 
 余白を表現するCSSプロパティ。
 
-<p class="-mt24">skilltrans-fe_201902_testリポジトリのsrc/sass/module/_testTransfer.scssを使用します。</p>
+<p class="-mt24">skilltrans-fe_201904_testリポジトリのsrc/sass/module/_testTransfer.scssを使用します。</p>
 ```shell
 npm run dev
 ```
@@ -61,7 +61,7 @@ npm run dev
 }
 ```
 <p class="-mt36">正方形に戻ったと思います。box-sizing: border-box;とすると、<br><span class="-b">padding, borderも含めて、height: 100pxにする</span>という挙動に変化します。  
-レッツのページで散見されたので、念のためご紹介しました。</p>
+理解せず使用すると複雑化するので、念のためご紹介しました。</p>
 
 --
 
@@ -81,6 +81,25 @@ marginには、<span class="-b">上下の余白は相殺される</span>とい�
 }
 ```
 この上下余白の相殺は便利なのですが、どの要素同士が上下になるか把握していないと、意図せず潰れて見えることがありますのでご注意ください。
+
+-- 
+
+ちなみに...  
+CSSの指定方法で、ショートハンドというものがあります。
+
+```css
+margin-top: 10px; /* 上下左右一つずつも指定できます */
+margin-right: 10px;
+margin-bottom: 10px;
+margin-left: 10px;
+
+margin: 10px; /* 上下左右10px */
+margin: 10px 20px; /* 上下10px, 左右20px */
+margin: 10px 20px 30px; /* 上10px, 左右20px, 下30px */
+margin: 10px 20px 30px 40px; /* 上10px, 右20px, 下30px 左40px */
+/* paddingも同様です。 */
+```
+他にもborder, backgroundもショートハンドで指定できたりします。
 
 ---
 
@@ -143,8 +162,8 @@ marginには、<span class="-b">上下の余白は相殺される</span>とい�
 <pre><code><div style="background: #999;">デフォルトでdisplay: block;自動的に100%</div></code></pre>
 
 
-<p class="-mt24">display: block;が宣言された要素は横幅100%がデフォルトで指定され、padding, marginが使用可能です。
-<span class="-b">divやp要素などにデフォルトで指定</span>されています。</p>
+<p class="-mt24">display: block;が宣言された要素は横幅100%がデフォルトで指定され、<br>text-aclign, padding, marginが使用可能です。
+<span class="-b">hxやdiv, p要素などにデフォルトで指定</span>されています。</p>
 
 --
 

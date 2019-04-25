@@ -90,15 +90,15 @@ setTimeout内に記述された関数はsetTimeoutが呼ばれてから、指定
 第一引数にurl, 第二引数にパラメータを<span class="-b">オブジェクト</span>で渡しています。
 ```js
 const googleBooksAPI = 'https://www.googleapis.com/books/v1/volumes?q=japan'
-$.ajax(googleBooksAPI,{type: 'get', dataType: 'json'})
-    .then(
-      (data) => { //通信成功時の処理
-        console.log(data)
-      },
-      (error) => {  //通信失敗時の処理
-        console.log('ng')
-      }
-    )
+$.ajax(googleBooksAPI, { type: 'get', dataType: 'json' })
+  .then(
+    (res) => { //通信成功時の処理
+      console.log(res.items)
+    },
+    (error) => {  //通信失敗時の処理
+      console.log('ng')
+    }
+  )
 ```
 この時点ではthen()というメソッドを生やすことで、APIの返却後に実行できると思ってください。他の書き方については<a href="https://qiita.com/tonkotsuboy_com/items/0722ad92f370ab0c411b">こちら</a>をご参照ください。
 
@@ -117,12 +117,12 @@ $.ajax(googleBooksAPI,{type: 'get', dataType: 'json'})
 ```js
 const googleBooksAPI = 'https://www.googleapis.com/books/v1/volumes?q=japan'
 fetch(googleBooksAPI)
-.then(res => {
-  return res.json()
-})
-.then(text => {
-  console.log(text) // APIを叩いた結果が表示される.
-})
+  .then(res => {
+    return res.json()
+  })
+  .then(text => {
+    console.log(text.items) // APIを叩いた結果が表示される.
+  })
 ```
 
 <p class="-mt24">Promiseは後ほど説明いたします。<br>fetch()はjavascriptの標準ライブラリなのですが、IE11,Android4.4で使用するには、polyfillというものを追加する必要があります。  また、fetch()はエラーハンドリングがわかりづらいため、axiosという外部ライブラリを利用することが一般的になっています。</p>
@@ -138,13 +138,13 @@ npm i axios
 ```js
 // npm i axios した後、import文で、axiosの使用を宣言できます。
 import axios from 'axios'
-const  googleBooksAPI = 'https://www.googleapis.com/books/v1/volumes?q=japan'
+const googleBooksAPI = 'https://www.googleapis.com/books/v1/volumes?q=japan'
 axios
-    .get(googleBooksAPI)
-    .then(res => {
-      console.log(res.data)
-    })
-    .catch(error => error)
+  .get(googleBooksAPI)
+  .then(res => {
+    console.log(res.data.items)
+  })
+  .catch(error => console.log(error))
 ```
 catch()でエラーを取得できますので、APIのurlを変更して確認してみましょう。
 
