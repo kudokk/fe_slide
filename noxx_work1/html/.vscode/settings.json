@@ -1,5 +1,0 @@
-{
-  "prettier.disableLanguages": ["markdown"],
-  "prettier.semi": false,
-  "prettier.singleQuote": true
-}

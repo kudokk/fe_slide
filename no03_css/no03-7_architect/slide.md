@@ -14,7 +14,7 @@
 - BEM
   - BEMとは
   - 具体的な BEM の書き方
-  - Let's Enjoy TOKYO で考える BEM
+  - デリバリープレミアム で考える BEM
 - 代表的な CSS 設計手法
   - FLOCSS
     - FLOCSS とは
@@ -180,60 +180,72 @@ BEM を使用することで上記のように、グローバルな名前空間�
 
 --
 
-### Let's Enjoy TOKYO で考える BEM
+### デリバリープレミアム で考える BEM
 
 <img src="./img/media.png" width="200">
-あくまで１例になりますが、ぐるなびデリバリーのモジュールをBEMで実装してみました。  
-ほぼこのまま「季節の特集」モジュールに使用できるのではないかと思います。
-https://jsbin.com/segoqehato/edit?html,css,output
+あくまで１例になりますが、デリバリープレミアムのモジュールをBEMで実装してみました。  
+これで似たものに再利用しやすくなるのではないでしょうか  
+https://jsbin.com/kikawoxado/1/edit?html,css,output
 
 -- 
 
 html
 ```html
-<ul class="media">
-  <li class="media__item">
-    <a href="#" class="media__link">
-      <div>
-        <img src="https://www.enjoytokyo.jp/img2/report/110/110418/110418_900.jpg" alt="" / class="media__img" width="95">
+<section class="ranking">
+  <h3 class="ranking__titleWrap">
+    <span class="ranking__title">2,000円台商品の売れ筋ランキング</span>
+  </h3>
+  <ul class="ranking__list">
+    <li class="ranking__item">
+      <a href="#" class="ranking__link">
+      <div class="ranking__numberWrap">
+        <img src="https://delivery.gnavi.co.jp/premium/assets/images/top/icon_rank01.png?201902010000" alt="" class="ranking__number">
       </div>
-      <div>
-        <p class="media__text">「パネチキン」半端ねぇ！！とろ～りチーズが滝のように流れる韓国グルメはNEXTブームの予感！</p>
-        <ul class="label">
-          <li class="label__item">友達・仲間</li>
-          <li class="label__item label__item--tokimeki">トキメキ女子</li>
-        </ul>
+      <div class="ranking__thumbWrap">
+        <img src="https://delivery-biz.gnavi.co.jp/img_item_big/6839711800002920519_1_prem.jpg?20180605102001" alt="商品画像" class="ranking__img">
       </div>
-    </a>
-  </li>
-<li class="media__item">
-    <a href="#" class="media__link">
-      <div>
-        <img src="https://www.enjoytokyo.jp/img2/report/110/110434/110434_900.jpg" alt="" / class="media__img" width="95">
+      <div class="ranking__textWrap">
+        <div class="ranking__shopTitle">築地うな重『極』</div>
+        <div class="ranking__shopDesc">築地うなぎ食堂</div>
+        <div class="ranking__priceWrap">2,880円<span class="ranking__price">(税込)</span></div>
       </div>
-      <div>
-        <p class="media__text">「パネチキン」半端ねぇ！！とろ～りチーズが滝のように流れる韓国グルメはNEXTブームの予感！</p>
-        <ul class="label">
-          <li class="label__item">友達・仲間</li>
-        </ul>
+     </a>
+    </li>
+    <li class="ranking__item">
+      <a href="#" class="ranking__link">
+      <div class="ranking__numberWrap">
+        <img src="https://delivery.gnavi.co.jp/premium/assets/images/top/icon_rank02.png?201902010000" alt="" class="ranking__number">
       </div>
-    </a>
-  </li>
-<li class="media__item">
-    <a href="#" class="media__link">
-      <div>
-        <img src="https://www.enjoytokyo.jp/img2/report/110/110442/110442_900.jpg" alt="" / class="media__img" width="95">
+      <div class="ranking__thumbWrap">
+        <img src="https://delivery-biz.gnavi.co.jp/img_item_big/6839711800002925999_1_prem.jpg?20190130134001" alt="商品画像" class="ranking__img">
       </div>
-      <div>
-        <p class="media__text">「パネチキン」半端ねぇ！！とろ～りチーズが滝のように流れる韓国グルメはNEXTブームの予感！</p>
-        <ul class="label">
-          <li class="label__item">友達・仲間</li>
-          <li class="label__item label__item--tokimeki">トキメキ女子</li>
-        </ul>
+      <div class="ranking__textWrap">
+        <div class="ranking__shopTitle">本さわら西京漬け</div>
+        <div class="ranking__shopDesc">銀座 十石</div>
+        <div class="ranking__priceWrap">2,160円<span class="ranking__price">(税込)</span></div>
       </div>
-    </a>
-  </li>
-</ul>
+     </a>
+    </li>
+    <li class="ranking__item">
+      <a href="#" class="ranking__link">
+      <div class="ranking__numberWrap">
+        <img src="https://delivery.gnavi.co.jp/premium/assets/images/top/icon_rank03.png?201902010000" alt="" class="ranking__number">
+      </div>
+      <div class="ranking__thumbWrap">
+        <img src="https://delivery-biz.gnavi.co.jp/img_item_big/6839711800002931426_1_prem.jpg?20181214184001" alt="商品画像" class="ranking__img">
+      </div>
+      <div class="ranking__textWrap">
+        <div class="ranking__shopTitle">頑固オヤジの特上握り</div>
+        <div class="ranking__shopDesc">鮨・割烹 幸太鮨</div>
+        <div class="ranking__priceWrap">2,160円<span class="ranking__price">(税込)</span></div>
+      </div>
+     </a>
+    </li>
+  </ul>
+  <div class="moreButton">
+    <a href="https://delivery.gnavi.co.jp/premium/area/pr13/bento/rank/prc3/" class="moreButton__link">以降のランキングを見る</a>
+  </div>
+</section>
 ```
 
 --
@@ -243,15 +255,47 @@ CSS
 * {
   margin: 0;
   padding: 0;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", "メイリオ", Meiryo, sans-serif;
 }
 
 ol, ul {
   list-style: none;
 }
 
-.media {
+.ranking {
+  &__titleWrap {
+    text-align: center;
+    position: relative;
+    margin: 0 0 10px;
+    
+    &::after {
+      position: absolute;
+      top: 18px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #a98423;
+      content: "";
+      display: block;
+      z-index: -1;
+    }
+  }
+  
+  &__title {
+    font-size: 1.4px;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 8px;
+  }
+
   &__item {
-    border-bottom: 1px solid #dddddd;
+    padding: 20px 0 20px;
+    position: relative;
+    
+    &:nth-of-type(n + 2) {
+      border-top: 1px solid gray;
+    }
   }
 
   &__link {
@@ -260,32 +304,63 @@ ol, ul {
     padding: 10px 15px;
   }
   
-  &__img {
-    padding-right: 10px;
+  &__numberWrap {
+    width: 15px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
   }
   
-  &__text {
-    font-size: 13px;
-    color: #333333;
-    line-height: 1.5;
+  &__number {
+    width: 100%;
+  }
+  
+  &__thumbWrap {
+    display: table-cell;
+    width: 156px;
+    vertical-align: top;
+  }
+  
+  &__img {
+    width: 100%;
+  }
+  
+  &__textWrap {
+    padding-left: 10px;
+  }
+  
+  &__shopTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #a98423;
+    text-decoration: underline;
+    line-height: 1.43;
+    padding: 0 0 10px;
+  }
+  
+  &__shopDesc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.43;
+    padding: 0 0 5px;
+  }
+  
+  &__priceWrap {
+    font-size: 14px;
+    color: #c12828;
   }
 }
 
-.label {
-  padding-top: 3px;
-
-  &__item {
-    border-radius: 2px;
-    border: 1px solid #b3b3b3;
-    color: #777;
-    display: inline-block;
-    font-size: 10px;
-    padding: 0 2px;
-    
-    &--tokimeki {
-      border-color: #f99;
-      color: #f99;
-    }
+.moreButton {
+  &__link {
+    display: block;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #eaddba;
+    color: #a98423;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 15px 0;
   }
 }
 ```
