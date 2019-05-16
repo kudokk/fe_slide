@@ -42,8 +42,6 @@
     - scripts
     - dependicies, devDependicies
   - package-lock.json
-- ディレクトリ構造
-  - srcとdist
 - 開発環境テンプレート(gurunavi creators)
   - gnavi-npm-scripts-boiler-pug
   - gulp-boilerplate-switchTask
@@ -52,7 +50,7 @@
     - Grunt, gulp
   - モジュールバンドラー
       - browserify, webpack
-- html(テンプレートエンジン)
+- HTML(テンプレートエンジン)
   - よく見かけるディレクトリ構成
   - hbs
     - 記法（使用例）
@@ -60,7 +58,7 @@
     - 記法（使用例）
   - pug, jade
     - 記法（使用例）
-- css
+- CSS
   - sass
   - cssMqpacker
   - autoprefixer
@@ -280,7 +278,7 @@
   - 有名な設計方法
     - FLOCSS
     - SMACSS
-- postCSS
+- PostCSS
   - postCSSとは
     - プリプロセッサ & ポストプロセッサ
   - sassと比較してのメリット
