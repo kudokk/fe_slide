@@ -134,7 +134,6 @@ CSSプロパティとしては下記を使用しています。
 #### ブラウザにおけるCSSのデバッグ
 - 特定の要素に適用されているCSSプロパティの見方  
 <a href="https://delivery.gnavi.co.jp/premium/?utm_id=prederi_shimei2-161031_pc_g_lis&gclid=EAIaIQobChMItL3c5fTn4QIVgxsqCh3ZjQZiEAAYASAAEgKa7fD_BwE">デリバリープレミアム</a>  
-開発者モードのelements欄にて、要素を選択してください。(id="contents_wrap" class="clearfix")  
 <p class="-mt36">Styles欄を見ていただくと、CSSプロパティがいくつかに区切られて出てきます。  
 上にあるほど優先され、上で上書きされているものは取り消し線がついています。  </p>
 <img src="./img/devtool_css.png" width="300">

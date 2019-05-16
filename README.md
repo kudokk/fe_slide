@@ -48,10 +48,12 @@
   - gnavi-npm-scripts-boiler-pug
   - gulp-boilerplate-switchTask
 - ビルドツール
-  - モジュールバンドラーとタスクランナー
-  - webpack
-  - gulp
+  - タスクランナー
+    - Grunt, gulp
+  - モジュールバンドラー
+      - browserify, webpack
 - html(テンプレートエンジン)
+  - よく見かけるディレクトリ構成
   - hbs
     - 記法（使用例）
   - ejs
@@ -60,6 +62,12 @@
     - 記法（使用例）
 - css
   - sass
+  - cssMqpacker
+  - autoprefixer
+  - cssnano
+- js
+  - babel
+  - uglify
 - 自動リロード
   - watch
   - browserSync
@@ -78,13 +86,12 @@
 - jsの特徴
   - 動的型付け言語
   - プロトタイプベース
-  - 関数型,手続き型であり、オブジェクト指向風に記述も可能
+  - 関数型であり、オブジェクト指向風に記述も可能
   - バージョン
     - ES5
     - ES201X
-      - 未来の記法を採用できる
-      - トランスパイルとその方法
-  - デバッグ(console.log)
+    - caniuse.com
+  - 開発者モード(dev-tools)でのデバッグ(console.log)
     - 開発者モード(dev-tools)
 - 変数
   - 宣言方法
@@ -95,49 +102,68 @@
     - 例
     - デメリット
 - データ型
-  - Number, String, Boolean, Symbol, Undefined, Null
-  - 参照型
-    - array, object, function
-  - typeof演算子
+  - データ型の紹介
+    - 基本型: Number, String, Boolean, Symbol, Undefined, Null
+    - 参照型: array, object, function
+  - データ型の調べ方(typeof演算子)
     - null, arrayがobject
 - 関数
   - 引数
-    - 型の宣言なし
-    - 引数の数が異なっても呼び出す
     - デフォルト引数(ES201X)
   - 関数の定義方法
     - function式
-    - 関数コンストラクタ
-    - 即時関数
     - アロー関数(ES201X)
+    - 関数コンストラクタ(deprecated)
+    - 即時関数
+  - 関数の特徴
+    - 引数の数と型は区別しない
+    - 同名関数の場合
 - 演算子と制御構文
-  - 代入演算子
-  - 比較演算子
-  - 論理演算子
-  - if, for, switch, while
+  - 演算子
+    - 算術演算子
+    - 代入演算子
+    - 比較演算子
+    - 論理演算子
+    - その他の演算子
+  - 制御構文
 - 配列とオブジェクト
-  - map, filter, reduce, forEach
-  - オブジェクトのforEach(Object.keys())
-  - オブジェクト同士のマージ
-    - Object.assign() (ES201X)
-    - スプレッド構文 (ES201X)
-- 静的検証ツール(eslint)とフォーマッタ(prettier)
-  - メリット
-  - インストールと設定
+  - 配列
+    - 宣言方法
+    - アクセス方法
+    - 4大メソッド: map, filter, reduce, forEach
+  - オブジェクト
+    - オブジェクトとは
+    - 宣言方法
+    - アクセス方法
+    - オブジェクト同士のマージ
+      - Object.assign() (ES201X)
+    - オブジェクトのforEach(Object.keys())
+      - スプレッド構文 (ES201X)
+- JavaScript の書き方
+  - 静的検証ツール(eslint)
+    - eslintとは
+    - メリット
+    - eslint-config
+    - 設定方法
+  - フォーマッタ(prettier)
+    - メリット
+    - インストールと設定
 - DOM操作とイベントリスナー
   - DOMとは
   - DOM取得用のメソッド
     - getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(), querySelectorAll()
+    - document.getElementsByClassName() vs document.querySelectorAll()
     - $(element) (jQuery)
+  - 配列っぽい操作
   - イベントリスナー
+    - イベントリスナーとは
+      - .addEventListener(event, function(){})
+      - .on(event, function(){}) (jQuery)
     - イベント
       - load, click, focus, change...
-    - .addEventListener(event, function(){})
-    - .on(event, function(){}) (jQuery)
-    - イベント伝搬
-      - aタグ内の要素に対するclickイベント付与
-      - preventDefault, stopPropagation
-        - イベントリスナー内での記述方法
+    - イベント制御
+      - event.stopPropagation()
+      - event.preventDefault()
 
 ### 2日目終了
 
@@ -145,6 +171,9 @@
 
 ### 3日目
 (2日目の振り返り)
+  - DOM操作課題
+    - 課題1: イベントリスナーの付与
+    - 課題2: イベント制御
 - よく使うES201Xで追加された文法
   - class構文
   - アロー関数
@@ -155,17 +184,19 @@
   - テンプレート文字列
   - Array.prototype.includes()
   - import/export
-- Storage
+- CookieとStorage
   - cookie, localStorage, sessionStorage
+    - 特徴, 属性, jsによる操作
 - 非同期処理
+  - 同期と非同期
   - setTimeout
     - 非推奨
   - fetch
-    - fetch
-      - caniuse.com
-    - axios
     - $.ajax({}) (jQuery)
+    - fetch
+    - axios
   - Promise
+    - Promiseのない時代(コールバック地獄)
     - all, finaly, race
   - async, await
 - ES5, ES201X, jQueryの選択
@@ -177,26 +208,48 @@
 > 目的: cssの開発環境を理解し、効率よくCSS開発できるようになってもらう
 - CSS
   - CSSとは
-  - CSSは、CSSファイルに
+    - webページの見た目（スタイル）を調整する宣言的な言語, カスケード式
+    - CSSは、CSSファイルに
   - バージョン
+    - 使用できないCSSプロパティも
+  - リセット系CSS
+    - reset.css
+    - normalize.css
   - 表現できること
     - アイコン
     - 状態変化
+    - アニメーション
   - 開発者モード(dev-tools)でのデバッグ
-    - 特定の要素で、有効になっているCSSプロパティを確認する
+    - 特定の要素で、有効になっているCSSプロパティを確認・変更
+    - ブラウザ上でのデバッグであること
 - Sass
-  - 概要
-  - 主に使用する他のsass構文
+  - Sassとは
+    - 構造的に整理して記述する
+    - CSSのプリプロセッサ
+  - Sassの機能・構文
+    - import
+    - 変数
+    - mixin
 - 主に使用するcssプロパティ
   - padding, margin
+    - padding, marginの違い
+    - box-sizing: border-box;
+    - 上下marginの相殺
+    - ショートハンド
   - position
+    - relative
+    - absolute
+    - 上下中央, 左右中央
   - display
     - block
     - inline
     - flex
+      - floatに代わるレイアウト手法
+      - ブラウザによって挙動が異なることも
+      - justify-content, align-items
 - ベンダープレフィックス
   - ベンダープレフィックスとは
-  - autoprefixerのインストール・設定
+  - autoprefixerの対象ブラウザ・OS設定
 
 ### 3日目終了
 
@@ -207,18 +260,29 @@
 
 - セレクタ・擬似クラス・擬似要素
   - セレクタとは
-  - classセレクタ, 要素セレクタ, idセレクタ
-  - link, visited, hover, active, focus, lang
-  - first-child, nth-child(n)
-  - after, before, first-lin, first-letter
-  - その他のセレクタ
+  - idセレクタ, classセレクタ, 要素型セレクタ
+  - 擬似クラス
+    - link, visited, hover, active, focus, lang
+    - first-child, nth-child(n)
+    - 擬似クラス課題
+  - 擬似要素: after, before, first-lin, first-letter
+  - その他のセレクタ: 全称, 属性, 複数, 子孫, 子, 隣接
 - 詳細度
   - カスケード式であること
-  - idセレクタ, classセレクタ, 擬似クラス, 擬似要素
+  - 詳細度の計算
 - CSS設計
-  - BEM(MindBEMding)
-  - FLOCSS
+  - CSS設計とは
+    - 予測性・再利用性・保守性・拡張性
+    - 必要性
+  - CSS設計の紹介の前に
+    - 詳細度の統一(classセレクタの使用)
+    - BEM(MindBEMding)
+  - 有名な設計方法
+    - FLOCSS
+    - SMACSS
 - postCSS
+  - postCSSとは
+    - プリプロセッサ & ポストプロセッサ
   - sassと比較してのメリット
     - 自分でカスタムしていく
       - ビルド速度
@@ -228,15 +292,16 @@
 
 > 目的: HTMLの理解を深め、より最適なHTMLを書いてもらう
 
-- HTMLはなぜ存在するのか
-  - HTMLとは
+- HTMLとは
 - HTML タグを正しく書く必要性
+  - SEO
   - アクセシビリティ
     - 視覚的ハンディと音声読み上げ
 - 正しい書き方とは
   - よく使用するタグの意味
     - hx, p, a, img, ul, li, ol, strong, header, main, footer, nav, section, aside, article
   - アウトライン
+- 覚えておくと役立つ html のルール・セオリー
 - 開発者モード(dev-tools)でのデバッグ
   - elements確認, 検索, 削除
 
@@ -244,9 +309,9 @@
 
 > 目的: パフォーマンスを考慮した画像の最適化をできるようになってもらう
 
-- 画像は重い
-  - 画像1枚,1リクエスト
+- 画像は重い(再確認)
   - 容量
+  - 画像1枚,1リクエスト
 - 画像の最適化
   - ファイル形式
     - jpg, png, gif, webp
@@ -264,6 +329,9 @@
 
 ## 課題:
 
+- CSS課題
+- HTML課題
+
 ### 4日目終了
 
 ---
@@ -271,10 +339,9 @@
 ### 5日目
 (4日目の振り返り)
 
-
-
 ## 課題:
-
+- CSS課題
+- HTML課題
 
 
 ### 5日目終了
@@ -284,9 +351,9 @@
 ### 6日目
 (5日目の振り返り)
 
-
-
 ## 課題:
+- CSS課題
+- HTML課題
 
 ### 6日目終了
 
@@ -296,6 +363,10 @@
 (6日目の振り返り)
 
 ## 課題:
+- アコーディオン課題
+- モーダル課題
+- 非同期課題
+- イメージスライダー課題
 
 
 ### 7日目終了
@@ -305,5 +376,10 @@
 ### 8日目
 (7日目の振り返り)
 
+## 課題:
+- アコーディオン課題
+- モーダル課題
+- 非同期課題
+- イメージスライダー課題
 
 ### 8日目終了
