@@ -1,3 +1,9 @@
+# フロントエンド検証環境
+https://frontend.gnavi.co.jp/skilltrans-fe_slide/
+
+# jenkins
+http://172.30.80.25:9050/jenkins/job/skilltrans-fe_slide_deploy/
+
 # 実施目的
 - 外注コストの削減
 - フロントエンドグループと相談するための共通言語を作る
