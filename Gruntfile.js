@@ -29,28 +29,28 @@ module.exports = function(grunt) {
         screwIE8: false,
       },
       build: {
-        src: 'js/reveal.js',
-        dest: 'js/reveal.min.js',
+        src: 'revealjs/js/reveal.js',
+        dest: 'revealjs/js/reveal.min.js',
       },
     },
 
     sass: {
       core: {
-        src: 'css/reveal.scss',
-        dest: 'css/reveal.css',
+        src: 'revealjs/css/reveal.scss',
+        dest: 'revealjs/css/reveal.css',
       },
       themes: {
         expand: true,
-        cwd: 'css/theme/source',
+        cwd: 'revealjs/css/theme/source',
         src: ['*.sass', '*.scss'],
-        dest: 'css/theme',
+        dest: 'revealjs/css/theme',
         ext: '.css',
       },
     },
 
     autoprefixer: {
       core: {
-        src: 'css/reveal.css',
+        src: 'revealjs/css/reveal.css',
       },
     },
 
@@ -59,8 +59,8 @@ module.exports = function(grunt) {
         compatibility: 'ie9',
       },
       compress: {
-        src: 'css/reveal.css',
-        dest: 'css/reveal.min.css',
+        src: 'revealjs/css/reveal.css',
+        dest: 'revealjs/css/reveal.min.css',
       },
     },
 
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
           exports: false,
         },
       },
-      files: ['Gruntfile.js', 'js/reveal.js'],
+      files: ['Gruntfile.js', 'revealjs/js/reveal.js'],
     },
 
     connect: {
@@ -119,20 +119,20 @@ module.exports = function(grunt) {
 
     watch: {
       js: {
-        files: ['Gruntfile.js', 'js/reveal.js'],
+        files: ['Gruntfile.js', 'revealjs/js/reveal.js'],
         tasks: 'js',
       },
       theme: {
         files: [
-          'css/theme/source/*.sass',
-          'css/theme/source/*.scss',
-          'css/theme/template/*.sass',
-          'css/theme/template/*.scss',
+          'revealjs/css/theme/source/*.sass',
+          'revealjs/css/theme/source/*.scss',
+          'revealjs/css/theme/template/*.sass',
+          'revealjs/css/theme/template/*.scss',
         ],
         tasks: 'css-themes',
       },
       css: {
-        files: ['css/reveal.scss'],
+        files: ['revealjs/css/reveal.scss'],
         tasks: 'css-core',
       },
       html: {
@@ -147,7 +147,7 @@ module.exports = function(grunt) {
     },
 
     retire: {
-      js: ['js/reveal.js', 'lib/js/*.js', 'plugin/**/*.js'],
+      js: ['revealjs/js/reveal.js', 'revealjs/lib/js/*.js', 'revealjs/plugin/**/*.js'],
       node: ['.'],
     },
   }),

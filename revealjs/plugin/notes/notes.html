@@ -317,7 +317,7 @@
 			<select class="speaker-layout-dropdown"></select>
 		</div>
 
-		<script src="../../plugin/markdown/marked.js"></script>
+		<script src="../../revealjs/plugin/markdown/marked.js"></script>
 		<script>
 
 			(function() {
@@ -348,7 +348,7 @@
 					// where navigation occurs so we don't sync it
 					if( data.state ) delete data.state.overview;
 
-					// Messages sent by the notes plugin inside of the main window
+					// Messages sent by the notes revealjs/plugin inside of the main window
 					if( data && data.namespace === 'reveal-notes' ) {
 						if( data.type === 'connect' ) {
 							handleConnectMessage( data );
