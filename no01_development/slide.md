@@ -838,7 +838,7 @@ html(lang=ja) ②
   <ul>
     <li>sass</li>
     <li>cssMqpacker</li>
-    <li>autoprifixer</li>
+    <li>autoprefixer</li>
     <li>cssnano</li>
   </ul>
 </div>
@@ -906,12 +906,12 @@ gulp-boilerplate-switchTask/gulp/task/sass.js
 <div class="-mt-80 -mb48">
   <h4>CSS</h4>
   <ul>
-    <li>autoprifixer</li>
+    <li>autoprefixer</li>
   </ul>
 </div>
 
 <p>ベンダープレフィックス: CSS3で採用される予定の機能が各ブラウザで先行実装されていますが、それらの機能を動作させるためにブラウザ毎に指定するもの</p>
-<p>autoprifixerは、自動でベンダープレフィックスを付与してくれます。</p>
+<p>autoprefixerは、自動でベンダープレフィックスを付与してくれます。</p>
 
 ビルド前
 ```css
