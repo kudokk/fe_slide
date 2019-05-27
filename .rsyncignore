@@ -1,0 +1,8 @@
+.git/
+.gitignore
+.rsyncignore
+Gruntfile.js
+package.json
+package-lock.json
+yarn.lock
+README.md

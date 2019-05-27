@@ -1,0 +1,179 @@
+/****** custom ******/
+
+$color1: #D54733;
+$color2: #0E5D9E;
+$color3: #3AA84B;
+$color4: #ECC417;
+$color5: #E8931E;
+
+.reveal {
+  border-top: 10px solid #fdfd20 !important;
+  box-sizing: border-box;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: none;
+  }
+  table {
+    width: 100%;
+    font-size: 60%;
+  }
+  p {
+    margin: 0;
+    font-size: 60%;
+    line-height: 1.5;
+  }
+  pre {
+    width: 100%;
+    margin: 0 auto;
+  }
+  ul {
+    display: block;
+    margin: 0 0 0 .8em;
+    line-height: 2;
+    li { 
+      font-size: 1.6rem;
+      font-weight: bold;
+      line-height: 1.7;
+      ul {
+        li {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  ol {
+    display: block;
+    margin: 0 0 0 .8em;
+    li {
+      list-style: upper-roman;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+  }
+  pre {
+    code {
+      font-family: 'Source Sans Pro', sans-serif !important;
+    }
+  }
+  .slides {
+    text-align: left !important;
+  }
+  .-center {
+    text-align: center !important;
+  }
+  .-mb8 {
+    margin-bottom: 8px !important;
+  }
+  .-mb12 {
+    margin-bottom: 12px !important;
+  }
+  .-mb16 {
+    margin-bottom: 16px !important;
+  }
+  .-mb24 {
+    margin-bottom: 24px !important;
+  }
+  .-mb32 {
+    margin-bottom: 32px !important;
+  }
+  .-mb48 {
+    margin-bottom: 48px !important;
+  }
+  .-mt8 {
+    margin-top: 8px !important;
+  }
+  .-mt12 {
+    margin-top: 12px !important;
+  }
+  .-mt16 {
+    margin-top: 16px !important;
+  }
+  .-mt24 {
+    margin-top: 24px !important;
+  }
+  .-mt36 {
+    margin-top: 36px !important;
+  }
+  .-mt48 {
+    margin-top: 48px !important;
+  }
+  .-mt-80 {
+    margin-top: -80px !important;
+  }
+  .-mr10 {
+    margin-right: 10px !important;
+  }
+}
+.tag {
+  font-size: 1.4rem !important;
+  padding: 8px 12px !important;
+  border-radius: 2px;
+  font-weight: bold !important;
+  &.-es5 {
+    background-color: #999;
+    color: #eee;
+    &:before {
+      content: 'ES5';
+    }
+  }
+  &.-es201x {
+    background-color: $color2;
+    color: #fff;
+    &:before {
+      content: '⚡ES201X';
+    }
+  }
+  &.-bad {
+    background-color: $color1;
+    color: #000;
+    &:before {
+      content: '👎BAD';
+    }
+  }
+  &.-good {
+    background-color: $color3;
+    color: #fff;
+    &:before {
+      content: '👍GOOD';
+    }
+  }
+  &.-important {
+    background-color: $color4;
+    &:before {
+      content: '💡IMPORTANT';
+    }
+  }
+}
+
+.-b {
+  font-weight: bold !important;
+}
+
+.-n {
+  font-weight: normal !important;
+}
+
+.-align-right {
+  text-align: right !important;
+}
+
+.-u {
+  text-decoration: underline #fdfd20;
+}
+
+.-nomal-weight {
+  font-weight: normal !important;
+}
+
+.-big {
+  font-size: 80% !important;
+}
+
+.-small {
+  font-size: 50% !important;
+}
+
+.-ex-small {
+  font-size: 40% !important;
+}
+

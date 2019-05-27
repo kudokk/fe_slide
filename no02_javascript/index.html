@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <link rel="apple-touch-icon" sizes="180x180" href="./favicon.ico">
+
+	<title>スキルトランスファー研修</title>
+
+	<link rel="stylesheet" href="../revealjs/css/reveal.css">
+	<link rel="stylesheet" href="../revealjs/css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../revealjs/css/print/pdf.css' : '../revealjs/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<ul>
+					<li><a href="./no02-01/">#02-01. JSの特徴</a></li>
+					<li><a href="./no02-02/">#02-02. 変数</a></li>
+					<li><a href="./no02-03/">#02-03. データ型</a></li>
+					<li><a href="./no02-04/">#02-04. 関数</a></li>
+					<li><a href="./no02-05/">#02-05. 演算子と制御構文</a></li>
+					<li><a href="./no02-06/">#02-06. 配列とオブジェクト</a></li>
+					<li><a href="./no02-07/">#02-07. JavaScript の書き方の話 (eslint, prettier)</a></li>
+					<li><a href="./no02-08/">#02-08. DOM操作</a></li>
+					<li><a href="./no02-09/">#02-09. よく使うES201Xで追加された文法</a></li>
+					<li><a href="./no02-10/">#02-10. CookieとStorage</a></li>
+					<li><a href="./no02-11/">#05-11. 非同期処理</a></li>
+					<li><a href="./no02-12/">#05-12. ES5, ES201X, jQueryの選択</a></li>
+					<li><a href="../">戻る</a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<script src="../revealjs/lib/js/head.min.js"></script>
+	<script src="../revealjs/js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: '../revealjs/plugin/markdown/marked.js' },
+				{ src: '../revealjs/plugin/markdown/markdown.js' },
+				{ src: '../revealjs/plugin/notes/notes.js', async: true },
+				{ src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
