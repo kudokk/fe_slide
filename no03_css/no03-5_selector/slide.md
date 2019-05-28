@@ -106,7 +106,7 @@ div {
 
 <blockquote class="-small -mb24">疑似クラス（pseudo-classes）とは、 要素や属性などの文書構造だけでは特定できない “ある状況のある要素”を対象としてスタイルを適用するセレクタのことです。 例えば、最初の子要素やユーザーが操作中の要素などを対象にスタイルを適用することが可能になります。 ユーザー操作による状況変化に対してスタイルを適用できるため、ウェブページに動的な効果を与えることが出来ます。</blockquote>
 <p class="-align-right"><a href="http://www.htmq.com/csskihon/005.shtml">CSSの基本 セレクタの種類</a></p>
-
+<p class="-mt24" style="text-align:center;"><b class="fragment">特定の状態にある要素を指定する、といったイメージとなります</b></p>
 --
 
 #### 主な擬似クラス
@@ -219,7 +219,7 @@ pseudo__itemクラスに対して、nth-of-typeを使用することで下記の
   </td></tr>
 </table>
 <img src="./img/giji.png" width="300">
-指定した要素の<span class="-b">内側に挿入されます。
+指定した要素の<span class="-b">内側に</span>挿入されます。
 ---
 
 #### その他のセレクタ
