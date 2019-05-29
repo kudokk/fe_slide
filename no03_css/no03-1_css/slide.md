@@ -101,8 +101,8 @@ javascript にバージョンがあるように、<br>CSS も少しずつバー�
 -- 
 
 ##### ②状態変化時の表現
-<p>まずは、「築地うな重『極』」エリアをマウスホバーしてみてください。</p>
-<a href="https://delivery.gnavi.co.jp/premium/?utm_id=prederi_shimei2-161031_pc_g_lis&gclid=EAIaIQobChMItL3c5fTn4QIVgxsqCh3ZjQZiEAAYASAAEgKa7fD_BwE" class="-small">デリバリープレミアム</a>
+<p>まずは、「北海道」エリアをマウスホバーしてみてください。</p>
+<a href="https://r.gnavi.co.jp/sp/beer/?sc_lid=spr_home_all" class="-small">特集ページ</a>  
 <p>このようにその要素の状態に応じて、スタイルを表現できます。</p>  
 
 - visited擬似クラス: 訪問済のリンクにスタイルを適用する
@@ -120,6 +120,7 @@ Apple WWDC2015 のロゴ(のアーカイブ)
 https://cssanimation.rocks/demo/wwdc15/
 
 CSSプロパティとしては下記を使用しています。
+- transition
 - animation
 - keyframes
 
@@ -133,7 +134,7 @@ CSSプロパティとしては下記を使用しています。
 
 #### ブラウザにおけるCSSのデバッグ
 - 特定の要素に適用されているCSSプロパティの見方  
-<a href="https://delivery.gnavi.co.jp/premium/?utm_id=prederi_shimei2-161031_pc_g_lis&gclid=EAIaIQobChMItL3c5fTn4QIVgxsqCh3ZjQZiEAAYASAAEgKa7fD_BwE">デリバリープレミアム</a>  
+<a href="https://r.gnavi.co.jp/sp/beer/?sc_lid=spr_home_all" class="-small">特集ページ</a>  
 <p class="-mt36">Styles欄を見ていただくと、CSSプロパティがいくつかに区切られて出てきます。  
 上にあるほど優先され、上で上書きされているものは取り消し線がついています。  </p>
 <img src="./img/devtool_css.png" width="300">

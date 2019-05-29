@@ -180,70 +180,47 @@ BEM を使用することで上記のように、グローバルな名前空間�
 
 --
 
-### デリバリープレミアム で考える BEM
+### 特集 で考える BEM
 
 <img src="./img/media.png" width="200">
-あくまで１例になりますが、デリバリープレミアムのモジュールをBEMで実装してみました。  
+あくまで１例になりますが、特集のモジュールをBEMで実装してみました。  
 これで似たものに再利用しやすくなるのではないでしょうか  
-https://jsbin.com/kikawoxado/1/edit?html,css,output
+https://jsbin.com/javocososu/1/edit?html,css,output
 
 -- 
 
 html
 ```html
-<section class="ranking">
-  <h3 class="ranking__titleWrap">
-    <span class="ranking__title">2,000円台商品の売れ筋ランキング</span>
-  </h3>
-  <ul class="ranking__list">
-    <li class="ranking__item">
-      <a href="#" class="ranking__link">
-      <div class="ranking__numberWrap">
-        <img src="https://delivery.gnavi.co.jp/premium/assets/images/top/icon_rank01.png?201902010000" alt="" class="ranking__number">
-      </div>
-      <div class="ranking__thumbWrap">
-        <img src="https://delivery-biz.gnavi.co.jp/img_item_big/6839711800002920519_1_prem.jpg?20180605102001" alt="商品画像" class="ranking__img">
-      </div>
-      <div class="ranking__textWrap">
-        <div class="ranking__shopTitle">築地うな重『極』</div>
-        <div class="ranking__shopDesc">築地うなぎ食堂</div>
-        <div class="ranking__priceWrap">2,880円<span class="ranking__price">(税込)</span></div>
-      </div>
-     </a>
-    </li>
-    <li class="ranking__item">
-      <a href="#" class="ranking__link">
-      <div class="ranking__numberWrap">
-        <img src="https://delivery.gnavi.co.jp/premium/assets/images/top/icon_rank02.png?201902010000" alt="" class="ranking__number">
-      </div>
-      <div class="ranking__thumbWrap">
-        <img src="https://delivery-biz.gnavi.co.jp/img_item_big/6839711800002925999_1_prem.jpg?20190130134001" alt="商品画像" class="ranking__img">
-      </div>
-      <div class="ranking__textWrap">
-        <div class="ranking__shopTitle">本さわら西京漬け</div>
-        <div class="ranking__shopDesc">銀座 十石</div>
-        <div class="ranking__priceWrap">2,160円<span class="ranking__price">(税込)</span></div>
-      </div>
-     </a>
-    </li>
-    <li class="ranking__item">
-      <a href="#" class="ranking__link">
-      <div class="ranking__numberWrap">
-        <img src="https://delivery.gnavi.co.jp/premium/assets/images/top/icon_rank03.png?201902010000" alt="" class="ranking__number">
-      </div>
-      <div class="ranking__thumbWrap">
-        <img src="https://delivery-biz.gnavi.co.jp/img_item_big/6839711800002931426_1_prem.jpg?20181214184001" alt="商品画像" class="ranking__img">
-      </div>
-      <div class="ranking__textWrap">
-        <div class="ranking__shopTitle">頑固オヤジの特上握り</div>
-        <div class="ranking__shopDesc">鮨・割烹 幸太鮨</div>
-        <div class="ranking__priceWrap">2,160円<span class="ranking__price">(税込)</span></div>
-      </div>
-     </a>
-    </li>
-  </ul>
-  <div class="moreButton">
-    <a href="https://delivery.gnavi.co.jp/premium/area/pr13/bento/rank/prc3/" class="moreButton__link">以降のランキングを見る</a>
+<section class="search-pref">
+  <h2 class="search-pref__heading">都道府県からお店を探す</h2>
+  <div class="search-pref__inner">
+    <ul>
+      <li class="search-pref__area">
+        <div class="search-pref__itemHeadWrap">
+          <p class="search-pref__itemHead">北海道・東北</p>
+        </div>
+        <ul class="search-pref__list">
+          <li class="label">
+            <a class="label__link" href="/sp/beer/hokkaido/">北海道</a>
+          </li>
+          <li class="label">
+            <span class="label__link label__link--disabled" href="/sp/beer/yamagata/">青森</span>
+          </li>
+          <li class="label">
+            <span class="label__link label__link--disabled" href="/sp/beer/yamagata/">秋田</span>
+          </li>
+          <li class="label">
+            <a class="label__link" href="/sp/beer/yamagata/">山形</a>
+          </li>
+          <li class="label">
+            <a class="label__link" href="/sp/beer/yamagata/">山形</a>
+          </li>
+          <li class="label">
+            <a class="label__link" href="/sp/beer/yamagata/">山形</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </section>
 ```
@@ -252,115 +229,101 @@ html
 
 CSS
 ```scss
+/* reset.cssの代替（仮）
 * {
   margin: 0;
   padding: 0;
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", "メイリオ", Meiryo, sans-serif;
 }
 
-ol, ul {
-  list-style: none;
+ul, li {
+  list-style-type: none;
 }
 
-.ranking {
-  &__titleWrap {
-    text-align: center;
-    position: relative;
-    margin: 0 0 10px;
-    
-    &::after {
-      position: absolute;
-      top: 18px;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: #a98423;
-      content: "";
-      display: block;
-      z-index: -1;
-    }
+a {
+  text-decoration: none;
+}
+*/
+.search-pref {
+  border-bottom: 1px solid #ccc;
+  background-color: #f5f5f5;
+  padding: 0 0 30px;
+  
+  &__heading {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.6;
+    padding: 11px 10px;
+    margin: 0;
   }
   
-  &__title {
-    font-size: 1.4px;
-    font-weight: bold;
-    display: inline-block;
-    background-color: #fff;
-    padding: 0 8px;
+  &__inner {
+    padding: 0 10px;
   }
-
-  &__item {
-    padding: 20px 0 20px;
-    position: relative;
-    
-    &:nth-of-type(n + 2) {
-      border-top: 1px solid gray;
-    }
-  }
-
-  &__link {
+  
+  &__area {
     display: flex;
-    text-decoration: none;
-    padding: 10px 15px;
   }
   
-  &__numberWrap {
-    width: 15px;
-    position: absolute;
-    top: 30px;
-    left: 20px;
+  &__itemHeadWrap {
+    background-color: #dd8303;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    min-height: 80px;
   }
   
-  &__number {
-    width: 100%;
-  }
-  
-  &__thumbWrap {
-    display: table-cell;
-    width: 156px;
-    vertical-align: top;
-  }
-  
-  &__img {
-    width: 100%;
-  }
-  
-  &__textWrap {
-    padding-left: 10px;
-  }
-  
-  &__shopTitle {
-    font-size: 14px;
-    font-weight: bold;
-    color: #a98423;
-    text-decoration: underline;
-    line-height: 1.43;
-    padding: 0 0 10px;
-  }
-  
-  &__shopDesc {
+  &__itemHead {
     font-size: 12px;
-    color: #666;
-    line-height: 1.43;
-    padding: 0 0 5px;
+    writing-mode: vertical-rl;
+    max-width: 18px
   }
   
-  &__priceWrap {
-    font-size: 14px;
-    color: #c12828;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-.moreButton {
+.label {
+    position: relative;
+    margin: 3px 0 0 3px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    height: 38px;
+    width: 76px;
+  
   &__link {
     display: block;
-    text-align: center;
-    width: 100%;
-    border: 1px solid #eaddba;
-    color: #a98423;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    padding: 15px 0;
+    padding: 0 12px;
+    color: #dd8303;
+    line-height: 36px;
+    font-size: 13px;
+    font-weight: 700;
+    
+    &::after {
+      content: "";
+      border-right: 1px solid #555;
+      border-bottom: 1px solid #555;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 10px;
+      margin: auto;
+      height: 7px;
+      width: 7px;
+    }
+    
+    &--disabled {
+      background-color: #f0f0f0;
+      color: #999;
+    }
   }
 }
 ```

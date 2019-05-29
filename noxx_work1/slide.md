@@ -33,11 +33,11 @@
 
 #### マークアップ課題について
 
-5 日目と 6 日目はデリバリープレミアムのとあるページを BEM と flex を用いてマークアップしていただきます。
+5 日目と 6 日目は特集のとあるページを BEM と flex を用いてマークアップしていただきます。
 
 - skilltrans-fe_201904_testにて[workHtml] html課題を選択してください。
 - 課題の元ネタ(sp)
-- https://delivery.gnavi.co.jp/premium/?utm_id=prederi_shimei2-161031_pc_g_lis&gclid=EAIaIQobChMItL3c5fTn4QIVgxsqCh3ZjQZiEAAYASAAEgKa7fD_BwE
+- https://r.gnavi.co.jp/sp/beer/?sc_lid=spr_home_all
 
 css: skilltrans-fe_201904_test/src/sass/module/_workHtml.scss  
 html: skilltrans-fe_201904_test/src/ejs/pages/workHtml.ejs
