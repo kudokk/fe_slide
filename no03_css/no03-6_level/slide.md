@@ -34,7 +34,7 @@ CSSにはセレクタの指定方法と記述の順番により、CSSプロパ�
   color: grey;
 }
 ```
-これでは、下に書いてある文字色: グレーが優先されます。
+↑ では、 **color: gray;** が優先されます。
 
 ```css
 li.pseudo__item {
@@ -45,7 +45,7 @@ li.pseudo__item {
   color: grey;
 }
 ```
-この場合では、上に開いてある文字色: 白色が優先されます。  
+↑ の場合では、 **color: white;** が優先されます。
 これらのように基本的には、上から下に上書きされるのですが、セレクタの指定方法（詳細度）により、優先度が変わってきます。
 
 ---
@@ -116,6 +116,7 @@ p.fuga {
 <br>
 html
 ```html
+<!-- インラインスタイル -->
 <div style="background-color: red; height: 100px;">hogehoge</div>
 ```
 

@@ -86,7 +86,7 @@ Webページのモジュールを<span class="-b">Block</span>という単位で
 <img src="./img/page_block.png" width="300">
 <img src="./img/tab_element.png" width="300">
 
-<a href="https://app.codegrid.net/entry/bem-basic-1">参考: BEMによるフロントエンドの設計</a>
+<a href="https://app.codegrid.net/entry/bem-basic-1">参考: BEMによるフロントエンドの設計(CodeGrid)</a>
 
 --
 
@@ -400,7 +400,9 @@ ol, ul {
 ```
 <p>component, project, utilsはクラス名に接頭辞をつけることが推奨されています</p>
 
-<p class="-mt24">考案者が日本人ということも有り、日本では知名度が高いです。詳しくは<a href="https://github.com/hiloki/flocss">こちら</a>をみてください。</p>
+--
+
+<p class="-mt24">考案者が日本人ということも有り、日本では知名度が高いです。<br>詳しくは<a href="https://github.com/hiloki/flocss">こちら</a>をみてください。</p>
 
 ---
 
@@ -410,7 +412,7 @@ ol, ul {
 
 ### SMACSSとは
 
-SMACSSはCSSを以下の5つにカテゴライズしたり、命名規則を設定することで、書きやすいCSS環境を目指しています。  
+SMACSSはCSSを以下の5つにカテゴライズし、命名規則を設定することで、書きやすいCSS環境を目指しています。  
 
 * Base : <span class="-mini">FLOCSSのFoundationと同じく、ブラウザスタイルの初期化, ページ全体の背景や基本的なタイポグラフィなど</span>
 * Layout : <span class="-mini">FLOCSSのLayoutと同じく、ページを構成するヘッダー、メイン、サイドバーなどのページ全体のレイアウトなど</span>

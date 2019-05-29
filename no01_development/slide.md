@@ -838,7 +838,11 @@ html(lang=ja) ②
   <ul>
     <li>sass</li>
     <li>cssMqpacker</li>
+<<<<<<< HEAD
     <li>autoprefixer</li>
+=======
+    <li>autoprifixer</li>
+>>>>>>> feature/tanaka-kan
     <li>cssnano</li>
   </ul>
 </div>
