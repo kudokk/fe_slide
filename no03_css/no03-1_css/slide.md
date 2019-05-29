@@ -91,7 +91,7 @@ javascript にバージョンがあるように、<br>CSS も少しずつバー�
 
 ##### ①簡単なアイコン
 
-<p>いくつかのアイコンはCSSでいけそうだなあと感じます。</p>
+<p>いくつかのアイコンはCSSでいけそうだと感じます。</p>
 <img src="./img/arrow.png" width="250">
 
 <a href="https://cssicon.space/#/" class="-mt36">CSSによるiconについてまとめているサイト</a>が便利です  
@@ -101,8 +101,8 @@ javascript にバージョンがあるように、<br>CSS も少しずつバー�
 -- 
 
 ##### ②状態変化時の表現
-<p>まずは、「北海道」エリアをマウスホバーしてみてください。</p>
-<a href="https://r.gnavi.co.jp/sp/beer/?sc_lid=spr_home_all" class="-small">特集ページ</a>  
+<p>まずは、「日本全国繁盛店」下の画像をマウスホバーしてみてください。</p>
+<a href="https://pro.gnavi.co.jp/" class="-small">ぐるなびPRO</a>  
 <p>このようにその要素の状態に応じて、スタイルを表現できます。</p>  
 
 - visited擬似クラス: 訪問済のリンクにスタイルを適用する
@@ -134,7 +134,7 @@ CSSプロパティとしては下記を使用しています。
 
 #### ブラウザにおけるCSSのデバッグ
 - 特定の要素に適用されているCSSプロパティの見方  
-<a href="https://r.gnavi.co.jp/sp/beer/?sc_lid=spr_home_all" class="-small">特集ページ</a>  
+<a href="https://pro.gnavi.co.jp/" class="-small">ぐるなびPRO</a>  
 <p class="-mt36">Styles欄を見ていただくと、CSSプロパティがいくつかに区切られて出てきます。  
 上にあるほど優先され、上で上書きされているものは取り消し線がついています。  </p>
 <img src="./img/devtool_css.png" width="300">

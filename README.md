@@ -272,7 +272,10 @@ http://172.30.80.25:9050/jenkins/job/skilltrans-fe_slide_deploy/
   - 擬似要素: after, before, first-lin, first-letter
   - その他のセレクタ: 全称, 属性, 複数, 子孫, 子, 隣接
 - 詳細度
-  - カスケード式であること
+  - CSSプロパティの適用例
+    - スタイルの継承（カスケード式であること）
+    - 記述順序
+    - 詳細度による優先
   - 詳細度の計算
 - CSS設計
   - CSS設計とは

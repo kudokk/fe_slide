@@ -180,10 +180,10 @@ BEM を使用することで上記のように、グローバルな名前空間�
 
 --
 
-### 特集 で考える BEM
+### ぐるなびPRO で考える BEM
 
 <img src="./img/media.png" width="200">
-あくまで１例になりますが、特集のモジュールをBEMで実装してみました。  
+あくまで１例になりますが、ぐるなびPROのモジュールをBEMで実装してみました。  
 これで似たものに再利用しやすくなるのではないでしょうか  
 https://jsbin.com/javocososu/1/edit?html,css,output
 

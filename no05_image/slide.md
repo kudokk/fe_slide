@@ -75,7 +75,7 @@
 ## 画像の最適化 🔨
 - 圧縮
 
-<a href="https://www.npmjs.com/package/imagemin">imageminというnpm module</a>を使用して画像の圧縮を行います。  
+<a href="https://www.npmjs.com/package/imagemin">imagemin</a>というnpm moduleを使用して画像の圧縮を行います。  
 
 <span class="-b">圧縮</span>とはいえ、解像度の変更はしていません。不要なメタデータの削除を行なっています。
 
@@ -94,7 +94,7 @@
   height: 31px;
 ```
 
-<a href="https://www.npmjs.com/package/spritesmith">spritesmithというnpm module</a>を使用すると、スプライト画像の自動生成と、それを表示するCSSのmixinの自動生成をすることができます。
+<a href="https://www.npmjs.com/package/spritesmith">spritesmith</a>というnpm moduleを使用すると、スプライト画像の自動生成と、それを表示するCSSのmixinの自動生成をすることができます。
 
 -- 
 
@@ -115,10 +115,8 @@
 ## 画像の最適化 🔨
 - 画像の遅延表示
 
-画像の読み込みを遅延させ、ユーザーのスクロール状況によって、画像の読み込みを開始します。
-<a href="https://r.gnavi.co.jp/area/tokyo/rs/?pf=13">検索sp</a>の店舗サムネイルも実装しています。
-
-<a href="https://www.npmjs.com/package/lazyload">lazyloadというnpm module</a>
+画像の読み込みを遅延させ、ユーザーのスクロール状況によって、画像の読み込みを開始します。  
+<a href="https://r.gnavi.co.jp/area/tokyo/rs/?pf=13">検索sp</a>の店舗サムネイルも、<a href="https://www.npmjs.com/package/lazysizes">lazysizes</a>というnpm moduleを利用して実装しています。
 
 -- 
 
