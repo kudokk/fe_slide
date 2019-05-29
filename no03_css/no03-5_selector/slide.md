@@ -114,37 +114,37 @@ div {
 <table>
   <tr><td>未訪問のリンク</td><td>
   ```
-  a:link {color:blue;}
+  .hoge:link {color:blue;}
   ```
   </td></tr>
   <tr><td>訪問済のリンク</td><td>
   ```
-  a:visited {color:blue;}
+  .hoge:visited {color:blue;}
   ```
   </td></tr>
   <tr><td>カーソルが乗っている要素</td><td>
   ```
-  a:hover {color:blue;}
+  .hoge:hover {color:blue;}
   ```
   </td></tr>
   <tr><td>クリック中の要素</td><td>
   ```
-  a:active {color:blue;}
+  .hoge:active {color:blue;}
   ```
   </td></tr>
   <tr><td>フォーカスされている要素</td><td>
   ```
-  input:focus {background:blue;}
+  .hoge:focus {background:blue;}
   ```
   </td></tr>
   <tr><td>特定の言語を指定した要素</td><td>
   ```
-  p:lang(en) {color:blue;}
+  .hoge:lang(en) {color:blue;}
   ```
   </td></tr>
   <tr><td>要素内の最初の子要素</td><td>
   ```
-  p:first-child {color:blue;}
+  .hoge:first-child {color:blue;}
   ```
   </td></tr>
 </table>
@@ -174,7 +174,7 @@ first-childは、要素内の最初の子要素ですが、<br>nth-of-type(n)で
 
 pseudo__itemクラスに対して、nth-of-typeを使用することで下記の状態を作成してください。  
 (要素間にborderを指定していただきたいです。)  
-/Users/kudo-k/git/skilltrans-fe_201904_testリポジトリのsrc/sass/module/_testTransfer.scssファイルを編集
+skilltrans-fe_201904_testリポジトリのsrc/sass/module/_testTransfer.scssファイルを編集
 
 <img src="./img/nthoftype.png" width="500">
 
@@ -199,27 +199,28 @@ pseudo__itemクラスに対して、nth-of-typeを使用することで下記の
 <table class="-mt24">
   <tr><td>要素の最初の一行</td><td>
   ```
-  p::first-line {color:blue;}
+  .hoge::first-line {color:blue;}
   ```
   </td></tr>
   <tr><td>要素の最初の一文字</td><td>
   ```
-  p::first-letter {color:blue;}
+  .hoge::first-letter {color:blue;}
   ```
   </td></tr>
   <tr><td>要素の直前</td><td>
   ```
-  h1::before {content:"〇〇";}
+  .hoge::before {content:"〇〇";}
   ```
   </td></tr>
   <tr><td>要素の直後</td><td>
   ```
-  h1::after {content:"〇〇";}
+  .hoge::after {content:"〇〇";}
   ```
   </td></tr>
 </table>
-<img src="./img/giji.png" width="300">
-指定した要素の<span class="-b">内側に</span>挿入されます。
+<img src="./img/giji.png" width="300">  
+指定した要素の<span class="-b">内側に</span>挿入されます。  
+例) <a href="https://pro.gnavi.co.jp/">ぐるなびPRO</a>のスライドショーの遷移ボタン
 ---
 
 #### その他のセレクタ
@@ -231,13 +232,13 @@ pseudo__itemクラスに対して、nth-of-typeを使用することで下記の
 <table class="-small">
 <tr><th>名前</th><th>セレクタの書式</th><th>スタイルを適用する対象</th><th>使用例</th></tr>
 <tr><th>全称セレクタ</th><td>＊</td><td>すべての要素</td><td>* {color:blue;}</td></tr>
-<tr><th rowspan="3">属性セレクタ</th><td>要素名[属性名]</td><td>特定の属性を持つ指定要素</td><td>a[target] {color:blue;}</td></tr>
-<tr><td>要素名[属性名= "属性値"]</td><td>特定の属性値を持つ指定要素</td><td>a[target="_blank"] {color:blue;}</td></tr>
-<tr><td>要素名[属性名~= "属性値"]</td><td>属性値候補と一致した要素</td><td>p[class~="sample"] {color:blue;}</td></tr>
-<tr><th>複数のセレクタ</th><td>セレクタ,セレクタ</td><td>複数のセレクタ</td><td>h1, h2 {color:blue;}</td></tr>
-<tr><th>子孫セレクタ</th><td>セレクタ セレクタ</td><td>下の階層の子孫要素</td><td>p strong {color:blue;}</td></tr>
-<tr><th>子セレクタ</th><td>セレクタ&gt;セレクタ</td><td>直下の階層の子要素</td><td>p &gt; strong {color:blue;}</td></tr>
-<tr><th>隣接セレクタ</th><td>セレクタ+セレクタ</td><td>直後に隣接している要素</td><td>h1 + p {color:blue;}</td></tr>
+<tr><th rowspan="3">属性セレクタ</th><td>要素名[属性名]</td><td>特定の属性を持つ指定要素</td><td>.hoge[target] {color:blue;}</td></tr>
+<tr><td>要素名[属性名= "属性値"]</td><td>特定の属性値を持つ指定要素</td><td>.hoge[target="_blank"] {color:blue;}</td></tr>
+<tr><td>要素名[属性名~= "属性値"]</td><td>属性値候補と一致した要素</td><td>.hoge[class~="sample"] {color:blue;}</td></tr>
+<tr class="-b"><th>複数のセレクタ</th><td>セレクタ,セレクタ</td><td>複数のセレクタ</td><td>.hoge, .fuga {color:blue;}</td></tr>
+<tr><th>子孫セレクタ</th><td>セレクタ セレクタ</td><td>下の階層の子孫要素</td><td>.hoge .fuga {color:blue;}</td></tr>
+<tr><th>子セレクタ</th><td>セレクタ&gt;セレクタ</td><td>直下の階層の子要素</td><td>.hoge &gt; .fuga {color:blue;}</td></tr>
+<tr class="-b"><th>隣接セレクタ</th><td>セレクタ+セレクタ</td><td>直後に隣接している要素</td><td>.hoge + .fuga {color:blue;}</td></tr>
 </table>
 
 ---

@@ -23,7 +23,7 @@ Sassの代用として名前を聞くことも多いかと思いますので、�
 
 SassはCSSのプリプロセッサで、PostCSSも同様というお話をしたのですが、PostCSSはCSSの<span class="-b">プリプロセッサ</span>であり、<span class="-b">ポストプロセッサ</span>にも当たります。  
 
-<p class="-mt24">PostCSS製 のツールとして、<br>ベンダープレックスを自動で付与する<span class="-b">「Autoprefixer」</span>や<br>未来の CSS の構文の一部を今のブラウザで解釈できるようにする「<span class="-b">cssnext」</span>、<br>カスタマイズ性に富んでいる CSS の静的検証ツールである<span class="-b">「stylelint」</span>などが有名です。</p>
+<p class="-mt24">PostCSS製 のツールとして、<br>ベンダープレフィックスを自動で付与する<span class="-b">「Autoprefixer」</span>や<br>未来の CSS の構文の一部を今のブラウザで解釈できるようにする「<span class="-b">cssnext」</span>、<br>カスタマイズ性に富んでいる CSS の静的検証ツールである<span class="-b">「stylelint」</span>などが有名です。</p>
 
 --
 
@@ -43,15 +43,15 @@ https://twitter.com/PostCSS/status/626046993006239744?ref_src=twsrc%5Etfw
 
 <table>
   <tr><th>-</th><th>PostCSS</th><th>Sass</th></tr>
-  <tr><td>ビルド速度</td><td>sassより早い</td><td>ふつう</td></tr>
-  <tr><td>ベンダープレフィックス付与</td><td>カスタマイズすれば付与できる</td><td>できない</td></tr>
-  <tr><td>静的検証</td><td>stylelintで簡単にできる</td><td>ひと手間かかるができる</td></tr>
-  <tr><td>入れ子記法</td><td>カスタマイズすればできる</td><td>標準でできる</td></tr>
-  <tr><td>変数</td><td>カスタマイズすればできる</td><td>標準でできる</td></tr>
+  <tr><td>ビルド速度</td><td>sassより早い</td><td>--</td></tr>
+  <tr><td>ベンダープレフィックス付与</td><td>プラグインにより可能</td><td>不可</td></tr>
+  <tr><td>静的検証</td><td>プラグインにより可能</td><td>不可</td></tr>
+  <tr><td>入れ子記法</td><td>プラグインにより可能</td><td>できる</td></tr>
+  <tr><td>変数</td><td>プラグインにより可能</td><td>できる</td></tr>
+  <tr><td>未来の記法</td><td>プラグインにより可能</td><td>不可</td></tr>
 </table>
 
-PostCSS は sass と比較すると大差はありません。
-ただ、ベンダープレフィックス付与が簡単にできることは大きなメリットであると考えられます。  
+PostCSS は sass と比較すると大差はありません。  
 そのため、現環境を今すぐに PostCSS に置き換えるというよりは、新規開発時に導入することをおすすめします。
 
 ---

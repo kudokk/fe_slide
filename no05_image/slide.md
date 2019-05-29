@@ -41,7 +41,7 @@
 <ul>
   <li class="-u"><strong>写真：jpg</strong></li>
   <li class="-u"><strong>透過も含めた画像：png</strong></li>
-  <li class="-u"><strong>彩りの少ないイラスト：gif</strong></li>
+  <li>彩りの少ないイラスト：gif（非推奨）</li>
 </ul>
 
 --
@@ -133,4 +133,10 @@
 
 **まとめ**
 
-- <b>画像の最適化方法として、<br>適切なファイル形式の選択、圧縮、sprite画像、base64、画像の遅延表示、アイコンをCSSで表現する　の6つがある</b>
+画像の最適化方法として、下記の6つがある  
+- 適切なファイル形式の選択
+- 圧縮
+- sprite画像
+- base64
+- 画像の遅延表示
+- アイコンをCSSで表現する
