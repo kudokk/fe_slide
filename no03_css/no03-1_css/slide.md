@@ -94,9 +94,7 @@ javascript にバージョンがあるように、<br>CSS も少しずつバー�
 <p>いくつかのアイコンはCSSでいけそうだと感じます。</p>
 <img src="./img/arrow.png" width="250">
 
-<a href="https://cssicon.space/#/" class="-mt36">CSSによるiconについてまとめているサイト</a>が便利です  
-・アイコンをクリックすると横にcssの記述例がでてきます。  
-・hoverすると該当箇所に色がつきます。
+<a href="https://cssicon.space/#/" class="-mt36">CSSによるiconについてまとめているサイト</a>でわかるように表現範囲は広いです。
 
 -- 
 
