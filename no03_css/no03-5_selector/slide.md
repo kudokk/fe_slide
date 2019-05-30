@@ -106,52 +106,44 @@ div {
 
 <blockquote class="-small -mb24">疑似クラス（pseudo-classes）とは、 要素や属性などの文書構造だけでは特定できない “ある状況のある要素”を対象としてスタイルを適用するセレクタのことです。 例えば、最初の子要素やユーザーが操作中の要素などを対象にスタイルを適用することが可能になります。 ユーザー操作による状況変化に対してスタイルを適用できるため、ウェブページに動的な効果を与えることが出来ます。</blockquote>
 <p class="-align-right"><a href="http://www.htmq.com/csskihon/005.shtml">CSSの基本 セレクタの種類</a></p>
-<p class="-mt24" style="text-align:center;"><b class="fragment">特定の状態にある要素を指定する、といったイメージとなります</b></p>
+<p class="-mt24" style="text-align:center;"><b class="fragment">「特定の状態にある要素」を指定する、といったイメージとなります</b></p>
 --
 
 #### 主な擬似クラス
 
 <table>
-  <tr><td>未訪問のリンク</td><td>
-  ```
-  .hoge:link {color:blue;}
-  ```
-  </td></tr>
-  <tr><td>訪問済のリンク</td><td>
-  ```
-  .hoge:visited {color:blue;}
-  ```
-  </td></tr>
-  <tr><td>カーソルが乗っている要素</td><td>
-  ```
-  .hoge:hover {color:blue;}
-  ```
-  </td></tr>
-  <tr><td>クリック中の要素</td><td>
-  ```
-  .hoge:active {color:blue;}
-  ```
-  </td></tr>
-  <tr><td>フォーカスされている要素</td><td>
-  ```
-  .hoge:focus {background:blue;}
-  ```
-  </td></tr>
-  <tr><td>特定の言語を指定した要素</td><td>
-  ```
-  .hoge:lang(en) {color:blue;}
-  ```
-  </td></tr>
-  <tr><td>要素内の最初の子要素</td><td>
-  ```
-  .hoge:first-child {color:blue;}
-  ```
-  </td></tr>
+  <tr>
+    <td>未訪問のリンク</td>
+    <td>.hoge<span style="font-weight:bold;">:link</span> {color:blue;}</td>
+  </tr>
+  <tr>
+    <td>訪問済のリンク</td>
+    <td>.hoge<span style="font-weight:bold;">:visited</span> {color:blue;}</td>
+  </tr>
+  <tr>
+    <td>カーソルが乗っている要素</td>
+    <td>.hoge<span style="font-weight:bold;">:hover</span> {color:blue;}</td></tr>
+  <tr>
+    <td>クリック中の要素</td>
+    <td>.hoge<span style="font-weight:bold;">:active</span> {color:blue;}</td>
+  </tr>
+  <tr>
+    <td>フォーカスされている要素</td>
+    <td>.hoge<span style="font-weight:bold;">:focus</span> {background:blue;}</td>
+  </tr>
+  <tr>
+    <td>特定の言語を指定した要素</td>
+    <td>.hoge<span style="font-weight:bold;">:lang(en)</span> {color:blue;}</td>
+  </tr>
+  <tr>
+    <td>要素内の最初の子要素</td>
+    <td>.hoge<span style="font-weight:bold;">:first-child</span> {color:blue;}</td>
+  </tr>
 </table>
 
 -- 
 
-#### nth-child(n)
+#### nth-child(n)、nth-of-type(n)
 
 first-childは、要素内の最初の子要素ですが、<br>nth-of-type(n)で「要素内のn番目の要素」を指定することができます。  
 また、nth-of-type(odd)で奇数要素, nth-of-type(even)で偶数要素を指定することができます。  
