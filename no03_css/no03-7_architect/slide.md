@@ -185,51 +185,36 @@ BEM を使用することで上記のように、グローバルな名前空間�
 <img src="./img/media.png" width="200">
 あくまで１例になりますが、ぐるなびPROのモジュールをBEMで実装してみました。  
 これで似たものに再利用しやすくなるのではないでしょうか  
-https://jsbin.com/javocososu/1/edit?html,css,output
+https://jsbin.com/nuzibayulu/edit?html,css,output
 
 -- 
 
 html
 ```html
-<section class="search-pref">
-  <h2 class="search-pref__heading">都道府県からお店を探す</h2>
-  <div class="search-pref__inner">
-    <ul>
-      <li class="search-pref__area">
-        <div class="search-pref__itemHeadWrap">
-          <p class="search-pref__itemHead">北海道・東北</p>
+<article class="articleWrap">
+  <h2 class="articleWrap__title">ぐるなびPROとは</h2>
+  <p class="articleWrap__desc">繁盛店の秘訣や売上アップのヒントが満載！<br>
+    飲食店の開業から経営までサポートする「ぐるなびPRO」ならではの会員特典をご紹介
+  </p>
+  <ul class="article">
+    <li>
+      <section class="article__textWrap">
+        <img class="article__img" src="//c-pro.gnst.jp/static/img/top/about_article.jpg?39b93df9f6713557c8f0c00de97594c970b03e3b9a4b98c503d2600add79f21e"></img>
+        <div>
+          <h3 class="article__title">2,000本以上の記事が読める</h3>
+          <p class="article__desc">業界の最新トレンド情報からお店を繁盛させるためのノウハウまで、役立つ情報をほぼ毎日配信しています。</p>
         </div>
-        <ul class="search-pref__list">
-          <li class="label">
-            <a class="label__link" href="/sp/beer/hokkaido/">北海道</a>
-          </li>
-          <li class="label">
-            <span class="label__link label__link--disabled" href="/sp/beer/yamagata/">青森</span>
-          </li>
-          <li class="label">
-            <span class="label__link label__link--disabled" href="/sp/beer/yamagata/">秋田</span>
-          </li>
-          <li class="label">
-            <a class="label__link" href="/sp/beer/yamagata/">山形</a>
-          </li>
-          <li class="label">
-            <a class="label__link" href="/sp/beer/yamagata/">山形</a>
-          </li>
-          <li class="label">
-            <a class="label__link" href="/sp/beer/yamagata/">山形</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</section>
+      <section>
+    </li>
+  </ul>
+</article>
 ```
 
 --
 
 CSS
 ```scss
-/* reset.cssの代替（仮）
+/* ここからreset.cssの代替（仮）です。 */
 * {
   margin: 0;
   padding: 0;
@@ -243,87 +228,76 @@ ul, li {
 a {
   text-decoration: none;
 }
-*/
-.search-pref {
-  border-bottom: 1px solid #ccc;
-  background-color: #f5f5f5;
-  padding: 0 0 30px;
+
+/* ここまでreset.cssの代替（仮）です。 */
+/* ここからぐるなびPRO */
+
+.articleWrap {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 0 16px;
   
-  &__heading {
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.6;
-    padding: 11px 10px;
-    margin: 0;
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    line-height: 1.66;
+    margin-bottom: 24px;
+    padding-left: 16px;
+    position: relative;
+    
+    &::before, &::after {
+      box-sizing: border-box;
+      content: "";
+      display: inline-block;
+      height: 50%;
+      position: absolute;
+      left: 0;
+      width: 4px;
+    }
+    
+    &::before {
+      background-color: #dc0012;
+      top: 0;
+    }
+    
+    &::after {
+      background-color: #ffbf58;
+      bottom: 0;
+    }
   }
   
-  &__inner {
-    padding: 0 10px;
-  }
-  
-  &__area {
-    display: flex;
-  }
-  
-  &__itemHeadWrap {
-    background-color: #dd8303;
-    box-sizing: border-box;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 0;
-    min-height: 80px;
-  }
-  
-  &__itemHead {
-    font-size: 12px;
-    writing-mode: vertical-rl;
-    max-width: 18px
-  }
-  
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
+  &__desc {
+    font-size: 16px;
+    letter-spacing: .02em;
+    line-height: 1.75;
   }
 }
 
-.label {
-    position: relative;
-    margin: 3px 0 0 3px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #fff;
-    height: 38px;
-    width: 76px;
+.article {
+  margin-top: 24px;
   
-  &__link {
-    display: block;
-    padding: 0 12px;
-    color: #dd8303;
-    line-height: 36px;
-    font-size: 13px;
-    font-weight: 700;
-    
-    &::after {
-      content: "";
-      border-right: 1px solid #555;
-      border-bottom: 1px solid #555;
-      transform: rotate(-45deg);
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 10px;
-      margin: auto;
-      height: 7px;
-      width: 7px;
-    }
-    
-    &--disabled {
-      background-color: #f0f0f0;
-      color: #999;
-    }
+  &__img {
+    max-width: 100%
+  }
+  
+  &__textWrap {
+    background-color: #f6f4ee;
+    padding: 24px 24px 32px;
+  }
+  
+  &__title {
+    font-size: 22px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  &__desc {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: .02em;
+    flex: 1 1;
+    margin-bottom: 0;
   }
 }
 ```
