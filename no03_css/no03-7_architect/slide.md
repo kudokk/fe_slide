@@ -353,7 +353,7 @@ SMACSSはCSSを以下の5つにカテゴライズし、命名規則を設定す�
 
 * Base : <span class="-mini">FLOCSSのFoundationと同じく、ブラウザスタイルの初期化, ページ全体の背景や基本的なタイポグラフィなど</span>
 * Layout : <span class="-mini">FLOCSSのLayoutと同じく、ページを構成するヘッダー、メイン、サイドバーなどのページ全体のレイアウトなど</span>
-* Module : あわゆる再利用できるオブジェクト
+* Module : 再利用できるパーツ
 * State : JS制御などによって切り替わる状態を表す
 * Theme : 広い範囲でスタイルを変更する
 
@@ -363,7 +363,7 @@ SMACSSはCSSを以下の5つにカテゴライズし、命名規則を設定す�
 .l-grid{}, .is-active
 ```
 
-詳しいルールは公式の<a href="https://smacss.com/files/smacss-ja.pdf">https://smacss.com/files/smacss-ja.pdf</a>を見た方が良いのですが、長いので、...
+詳しいルールは公式の<a href="http://smacss.com/ja">https://smacss.com/files/smacss-ja.pdf</a>を見た方が良いのですが、長いので、...
 
 ---
 
