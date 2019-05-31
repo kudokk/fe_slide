@@ -98,9 +98,7 @@ li.pseudo__item {
 </table>
 <a href="https://qiita.com/flag_ryo/items/cf3512f9b4978c41d0e1" class="-ex-small">他のセレクタも含めた詳細度</a>  
 
-<span class="-b">A > B > C</span>という関係性で、繰り上がりもありませんので、下記の場合、１つ目のセレクタが優先されます。  
-１つ目のセレクタ: A:1, B:0, C:0  
-２つ目のセレクタ: A:0, B:3, C:1
+<span class="-b">A > B > C</span>という関係性で、<span class="-b">繰り上がりもありません</span>。  
 
 -- 
 

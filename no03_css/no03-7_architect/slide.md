@@ -7,30 +7,32 @@
 #### もくじ
 
 - CSS 設計とは
-  - CSS 設計はなぜ必要なのか
-  - CSS 設計をせずに困る例
+  - CSS 設計の目的
+  - CSS 設計の必要性
 - CSS設計の紹介の前に
   - 詳細度の統一
 - BEM
   - BEMとは
   - 具体的な BEM の書き方
-  - デリバリープレミアム で考える BEM
+  - ぐるなびPRO で考える BEM
 - 代表的な CSS 設計手法
-  - FLOCSS
-    - FLOCSS とは
   - SMACSS
     - SMACSSとは
+  - FLOCSS
+    - FLOCSS とは
 - まとめ
 
 ---
 
 ## CSS 設計とは
+  - CSS 設計の目的
+  - CSS 設計の必要性
 
 --
 
 ### CSS 設計とは
-
-CSS 設計とは、CSS を記述する時のルールとなるものです。  
+  - CSS 設計の目的
+ 
 プロジェクト毎に適した CSS 設計を採用することで、「良い CSS※」にすることができます。
 
 <p class="-mt36 -small">※良いCSS = </p>
@@ -42,13 +44,11 @@ CSS 設計とは、CSS を記述する時のルールとなるものです。
 </ul>
 
 --
+### CSS 設計とは
+  - CSS 設計の必要性
 
-### CSS 設計はなぜ必要なのか
+CSS 設計がない状態で、大規模なサイトを複数人で運用していると、<br>予測・再利用・保守・拡張が難しくなり、簡単に思える改修にもコストがかかります。
 
-CSS 設計がないと、大規模なサイトを複数人で運用するときに、予測・再利用・保守・拡張が難しくなり、コード量が増大していきます。
-
-また、<b class="-u">フロントエンドエンジニアが CSS を書くのに頭を悩ませ、時間を使っている部分は CSS 設計です。</b>
-CSS 単体で書くことについては、そんなに時間を使いません。
 
 ---
 
@@ -95,7 +95,7 @@ Webページのモジュールを<span class="-b">Block</span>という単位で
 web サイトによくある<span class="-b">カード</span>型のコンポーネントを BEM を用いて記述してみます。
 <img src="./img/card.png" width="180">
 
-https://jsbin.com/hereroxufe/1/edit?html,css,output
+https://jsbin.com/vihokomevo/3/edit?html,css,output
 
 -- 
 
@@ -305,8 +305,32 @@ a {
 ---
 
 ## 代表的な CSS 設計手法
-- FLOCSS
 - SMACSS
+- FLOCSS
+
+---
+
+## SMACSS
+
+--
+
+### SMACSSとは
+
+SMACSSはCSSを以下の5つにカテゴライズし、命名規則を設定することで、書きやすいCSS環境を目指しています。  
+
+* Base : <span class="-mini">ブラウザスタイルの初期化, ページ全体の背景や基本的なタイポグラフィなど</span>
+* Layout : <span class="-mini">FLOCSSのLayoutと同じく、ページを構成するヘッダー、メイン、サイドバーなどのページ全体のレイアウトなど</span>
+* Module : 再利用できるパーツ
+* State : JS制御などによって切り替わる状態を表す
+* Theme : 広い範囲でスタイルを変更する
+
+<p class="-mt24">命名</p>
+
+```css
+.l-grid{}, .is-active
+```
+
+詳しいルールは公式の<a href="http://smacss.com/ja">https://smacss.com/files/smacss-ja.pdf</a>を見た方が良いのですが、長いので、...
 
 ---
 
@@ -318,7 +342,7 @@ a {
 
 <p class="-mb24">３つのレイヤーと、Objectの子レイヤーによって構成されています。</p>
 <ul>
-  <li>Foundation : <span class="-mini">ブラウザスタイルの初期化, ページ全体の背景や基本的なタイポグラフィなど</span></li>
+  <li>Foundation : <span class="-mini">SMACSSのFoundationと同じく、ブラウザスタイルの初期化, ページ全体の背景や基本的なタイポグラフィなど</span></li>
   <li>Layout : <span class="-mini">ページを構成するヘッダー、メイン、サイドバーなどのページ全体のレイアウトなど</span></li>
   <li>Object 
     <ul>
@@ -339,31 +363,15 @@ a {
 
 --
 
+ComponentとProject
+
+<img src="./img/flocss.png" width="600">
+
+参考: <a href="https://qiita.com/uggds/items/d904b2f9a103c37a25fa">FLOCSSを使ったCSS設計での悩みどころと解決案</a>
+
+-- 
+
 <p class="-mt24">考案者が日本人ということも有り、日本では知名度が高いです。<br>詳しくは<a href="https://github.com/hiloki/flocss">こちら</a>をみてください。</p>
-
----
-
-## SMACSS
-
---
-
-### SMACSSとは
-
-SMACSSはCSSを以下の5つにカテゴライズし、命名規則を設定することで、書きやすいCSS環境を目指しています。  
-
-* Base : <span class="-mini">FLOCSSのFoundationと同じく、ブラウザスタイルの初期化, ページ全体の背景や基本的なタイポグラフィなど</span>
-* Layout : <span class="-mini">FLOCSSのLayoutと同じく、ページを構成するヘッダー、メイン、サイドバーなどのページ全体のレイアウトなど</span>
-* Module : 再利用できるパーツ
-* State : JS制御などによって切り替わる状態を表す
-* Theme : 広い範囲でスタイルを変更する
-
-<p class="-mt24">命名</p>
-
-```css
-.l-grid{}, .is-active
-```
-
-詳しいルールは公式の<a href="http://smacss.com/ja">https://smacss.com/files/smacss-ja.pdf</a>を見た方が良いのですが、長いので、...
 
 ---
 
@@ -378,6 +386,6 @@ CSS設計の詳細に関しては、この緑の本に勝るものはござい�
 ## まとめ
 
 - CSS 設計は良い CSS を書くためのルールのこと
-- 良い CSS = <b>拡張・保守・予測しやすい CSS</b>のこと
-- BEM は命名規則、FLOCSS, SMACSS は設計手法
+- 良い CSS = <b>拡張・保守・予測・再利用しやすい CSS</b>のこと
+- BEM は命名規則、SMACSS, FLOCSS は設計手法
 - 緑本をご一読いただきたいです。

@@ -55,8 +55,8 @@
 ```
 
 idセレクタは、<span class="-b">#idName</span>で指定します。  
-id属性自体が1ページにつき１つしか使えないというデメリットも存在するため、あまり使用されることはありません。  
-(fooというidは、同じhtml内で使用できない。)
+同じid名は、同じhtml内では使用できないため、あまり使用されることはありません。  
+例) fooというidは、同じhtml内で使用できない。
 
 -- 
 
@@ -94,7 +94,7 @@ div {
 ```
 
 要素型セレクタは、<span class="-b">タグ名</span>で指定します。  
-広範囲に影響し、タグが固定なのは汎用性が下がるので、あまり使用しません。
+広範囲に影響し、タグが固定なのは汎用性が下がるので、あまり使用しないで下さい。
 
 ---
 
@@ -137,15 +137,15 @@ div {
   </tr>
   <tr>
     <td>要素内の最初の子要素</td>
-    <td>.hoge<span style="font-weight:bold;">:first-child</span> {color:blue;}</td>
+    <td>.hoge<span style="font-weight:bold;">:first-of-type</span> {color:blue;}</td>
   </tr>
 </table>
 
 -- 
 
-#### nth-child(n)、nth-of-type(n)
+#### nth-of-type(n)
 
-first-childは、要素内の最初の子要素ですが、<br>nth-of-type(n)で「要素内のn番目の要素」を指定することができます。  
+first-of-typeは、要素内の最初の子要素ですが、<br>nth-of-type(n)で「要素内のn番目の要素」を指定することができます。  
 また、nth-of-type(odd)で奇数要素, nth-of-type(even)で偶数要素を指定することができます。  
 ```html
 <ul class="js-list">

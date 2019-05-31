@@ -285,8 +285,8 @@ http://172.30.80.25:9050/jenkins/job/skilltrans-fe_slide_deploy/
     - 詳細度の統一(classセレクタの使用)
     - BEM(MindBEMding)
   - 有名な設計方法
-    - FLOCSS
     - SMACSS
+    - FLOCSS
 - PostCSS
   - postCSSとは
     - プリプロセッサ & ポストプロセッサ
