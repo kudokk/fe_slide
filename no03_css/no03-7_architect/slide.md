@@ -319,7 +319,7 @@ a {
 SMACSSはCSSを以下の5つにカテゴライズし、命名規則を設定することで、書きやすいCSS環境を目指しています。  
 
 * Base : <span class="-mini">ブラウザスタイルの初期化, ページ全体の背景や基本的なタイポグラフィなど</span>
-* Layout : <span class="-mini">FLOCSSのLayoutと同じく、ページを構成するヘッダー、メイン、サイドバーなどのページ全体のレイアウトなど</span>
+* Layout : <span class="-mini">ページを構成するヘッダー、メイン、サイドバーなどのページ全体のレイアウトなど</span>
 * Module : 再利用できるパーツ
 * State : JS制御などによって切り替わる状態を表す
 * Theme : 広い範囲でスタイルを変更する
@@ -330,7 +330,7 @@ SMACSSはCSSを以下の5つにカテゴライズし、命名規則を設定す�
 .l-grid{}, .is-active
 ```
 
-詳しいルールは公式の<a href="http://smacss.com/ja">https://smacss.com/files/smacss-ja.pdf</a>を見た方が良いのですが、長いので、...
+詳しいルールは公式の<a href="http://smacss.com/ja">https://smacss.com/files/smacss-ja.pdf</a>を見た方が良いです。
 
 ---
 
@@ -343,7 +343,7 @@ SMACSSはCSSを以下の5つにカテゴライズし、命名規則を設定す�
 <p class="-mb24">３つのレイヤーと、Objectの子レイヤーによって構成されています。</p>
 <ul>
   <li>Foundation : <span class="-mini">SMACSSのFoundationと同じく、ブラウザスタイルの初期化, ページ全体の背景や基本的なタイポグラフィなど</span></li>
-  <li>Layout : <span class="-mini">ページを構成するヘッダー、メイン、サイドバーなどのページ全体のレイアウトなど</span></li>
+  <li>Layout : <span class="-mini">SMACSSのLayoutと同じく、ページを構成するヘッダー、メイン、サイドバーなどのページ全体のレイアウトなど</span></li>
   <li>Object 
     <ul>
       <li>Component : <span class="-mini">最小限の機能を持ったものなど</span></li>
