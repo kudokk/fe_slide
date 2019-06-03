@@ -123,7 +123,7 @@ const extime = new Date().getTime();
 const cltime = new Date(extime + 60 * 60 * 24 * 1000 * expiredays);
 //GMT形式に変換
 const exdate = cltime.toUTCString();
-document.cookie = 'exdate'
+document.cookie = `hoge=fuga; expires=${exdate}`
 ```
 
 -- 
