@@ -60,7 +60,6 @@ jsの特徴でもお話ししましたが、あくまでプロトタイプベー
 
 また、継承もextendsを使用して記述できるようになりました。
 ```js
-
 class User extends Human {
   constructor(arg1,arg2) {
     super(arg1)
@@ -75,17 +74,14 @@ const user1 = new User('taro', 1111)
 
 console.log(user1.name) //taro
 console.log(user1.loginId) //1111
+console.log(user1.getName()) //taro
 console.log(user1.getLoginId()) //1111
 
 ```
 
 ---
 
-<h2 class="-center">アロー関数</h2>
-
---
-
-#### 思い出すやつ
+<h2 class="-center">アロー関数　<span class="tag -es201x"></span></h2>
 
 <blockquote class="-small">アロー関数式 は、その名のとおり矢印を使って記述し、function 式より短い構文で同様な内容を記述することができます。なおthis, arguments, super, new.target を束縛しません。</blockquote>
 
@@ -102,7 +98,8 @@ console.log(user1.getLoginId()) //1111
 <p class="-mt24 -align-right">by, 改訂新版 javascript本格入門 P.226</p>
 
 <h4 class="-mt24">つまり？</h4>
-- thisは変数であり、thisの参照先はthisを使った場所自身を指す。もちろん、どんな参照先が入っているかは使った場所によって異なる。
+- thisは変数であり、thisの参照先はthisを使った場所自身を指す。  
+もちろん、どんな参照先が入っているかは使った場所によって異なる。
 
 --
 #### thisの参照先
@@ -234,7 +231,7 @@ obj.funcNomal() // objVal
 
 ---
 
-<h2 class="-center">スプレッド構文</h2>
+<h2 class="-center">スプレッド構文　<span class="tag -es201x"></span></h2>
 
 --
 
@@ -293,7 +290,7 @@ console.log(obj3)
 
 ---
 
-<h2 class="-center">分割代入</h2>
+<h2 class="-center">分割代入　<span class="tag -es201x"></span></h2>
 
 --
 
@@ -338,7 +335,7 @@ const { foo } = originalObject
 console.log(foo) // おはよう
 ```
 
-上記の例だと、<b class="-u">originalObject</b>から<b class="-u">foo</b>という中身(keyとvalue)だけを取り出し、<b class="-u">hogeという変数に「おはよう」というvalueを割り当てた</b>という記述になります。
+上記の例だと、<b class="-u">originalObject</b>から<b class="-u">foo</b>という中身(keyとvalue)だけを取り出し、<b class="-u">fooという変数に「おはよう」というvalueを割り当てた</b>という記述になります。
 
 --
 
@@ -364,7 +361,7 @@ console.log(sum(99, testObject)) // 101
 
 ---
 
-<h2 class="-center">テンプレート文字列</h2>
+<h2 class="-center">テンプレート文字列　<span class="tag -es201x"></span></h2>
 
 --
 
@@ -411,7 +408,7 @@ console.log(templateHTML)
 
 ---
 
-<h2 class="-center">Array.prototype.includes()</h2>
+<h2 class="-center">Array.prototype.includes()　<span class="tag -es201x"></span></h2>
 
 --
 
@@ -443,7 +440,7 @@ if (testArr.includes('taro') === true) {
 ```
 ---
 
-<h2 class="-center">import/export</h2>
+<h2 class="-center">import/export　<span class="tag -es201x"></span></h2>
 
 言葉だけでは説明が難しいので、skilltrans-fe_201904_testのsrc/js/test_transfer.js, src/js/module/test_transferModule.jsを使用していきます。
 
