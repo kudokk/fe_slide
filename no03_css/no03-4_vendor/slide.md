@@ -37,7 +37,7 @@ CSSプロパティによっては、各ブラウザが先行実装していて�
 
 #### autoprefixerの対象ブラウザ・OS設定
 
-- skilltrans-fe_201904_testのgulpfile.jsの96行目以降をご確認ください。
+
 
 --
 

@@ -166,7 +166,6 @@ first-of-typeは、要素内の最初の子要素ですが、<br>nth-of-type(n)�
 
 pseudo__itemクラスに対して、nth-of-typeを使用することで下記の状態を作成してください。  
 (要素間にborderを指定していただきたいです。)  
-skilltrans-fe_201904_testリポジトリのsrc/sass/module/_testTransfer.scssファイルを編集
 
 <img src="./img/nthoftype.png" width="500">
 

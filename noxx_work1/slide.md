@@ -24,9 +24,7 @@
 
 #### CSS課題について
 
-- skilltrans-fe_201904_testにて[workCss] css課題を選択してください。
 - この課題は css の理解度について足並みを揃える目的で実施します。  
-- 問題はhtml内に記載されていますので、問題文に従って、skilltrans-fe_201904_test/src/sass/module/_workCss.scss を編集してください。
 - すぐに終わってしまった場合、マークアップ課題に進んでも問題ありません
 
 --
@@ -35,12 +33,9 @@
 
 5 日目と 6 日目はぐるなびPROページを BEM と flex を用いてマークアップしていただきます。
 
-- skilltrans-fe_201904_testにて[workHtml] html課題を選択してください。
 - 課題の元ネタ(pc)
 - https://pro.gnavi.co.jp/
 
-css: skilltrans-fe_201904_test/src/sass/module/_workHtml.scss  
-html: skilltrans-fe_201904_test/src/ejs/pages/workHtml.ejs
 
 --
 

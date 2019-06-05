@@ -51,8 +51,6 @@ Sass
 - ②変数
 - ③mixin
 
-import, 変数は、skilltrans-fe_201904_testリポジトリのsrc/sassを見てください。
-
 -- 
 
 ##### ①import

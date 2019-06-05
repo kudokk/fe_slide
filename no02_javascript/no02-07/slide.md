@@ -108,10 +108,7 @@ const func = (x) => {
 
 #### eslintの挙動確認
 
-skilltrans-fe_201904_testリポジトリのmasterブランチにて、
 ```shell
-git pull
-npm i
 npm run dev
 ```
 src/js/test_transfer.jsに下記を入力後、保存してみてください。  

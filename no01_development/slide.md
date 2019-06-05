@@ -8,7 +8,6 @@
 
 - nodenv, node
 - npm
-- 開発環境テンプレート(gurunavi creators)
 - ビルドツール
 - HTML（テンプレートエンジン）
 - CSS（Sass）
@@ -150,8 +149,8 @@ $ nodenv local 9.9.0
   </ul>
 </div>
 
-<p>背景： プロジェクトの大規模化によって、効率よくチーム開発していく必要があります</p>
-<p class="-ex-small fragment">ちなみに検索のHTMLはspだけで 約2000行 × 20ファイル以上あります...</p>
+<p>背景：  
+プロジェクトの大規模化によって、効率よくチーム開発していく必要があります</p>
 
 <p class="-mt24">PHPのSmartyのように、HTMLにもテンプレートエンジンがあり、モジュール単位で管理しています。css, jsも同様です。</p>
 <img src="img/concat.png" width="400">
@@ -195,31 +194,6 @@ package.jsonが生成されたと思います。
   </ul>
 </div>
 
-package.jsonとは
-- npm moduleの依存関係を記したjsonファイル
-
-役割
-- チーム内の開発環境の統一
-
-<br>
-下記のコマンドを打つと、moduleが追加され、package.jsonにmodule名とバージョンが記載されます
-```shell
-npm i autoprefixer
-```
-
-<p class="-mt12">git等で、package.jsonを含む環境を共有してもらったら、下記のコマンドでmodule一覧をインストールできます。</p>
-```shell
-npm i
-```
-
--- 
-<div class="-mt-80 -mb48">
-  <h4>npm</h4>
-  <ul>
-    <li>package.json</li>
-  </ul>
-</div>
-
 package.jsonのscriptsに記載したものは、コマンドとして実行できます。
 ```json
 {
@@ -240,95 +214,12 @@ $ npm run test
 <div class="-mt-80 -mb48">
   <h4>npm</h4>
   <ul>
-    <li>package.json</li>
-  </ul>
-</div>
-
-<p>ぐるなびのテンプレートを使用して、フロントエンドのビルドを実際にお試しいただきたいと思います。</p><br>
-<ul>
-  <li>git clone https://github.com/gurunavi-creators/gnavi-npm-scripts-boiler-pug.git</li>
-  <li>npm i</li>
-  <li>npm run build</li>
-  <li>npm run watch</li>
-</ul>
-
---
-
-<div class="-mt-80 -mb48">
-  <h4>npm</h4>
-  <ul>
     <li>ちなみにpackage-lock.jsonは...</li>
   </ul>
 </div>
 
 <p>npmモジュールのバージョン固定のため生成されます。<br>
 package-lock.jsonもチーム内で共有することで、より環境の固定化ができます。</p>
-
----
-
-### 開発環境テンプレート<br>(gurunavi creators)
-<img src="./img/github.png" width="200">
-  - gnavi-npm-scripts-boiler-pug
-  - gulp-boilerplate-switchTask
-
-<p class="-mt24">主な構成について紹介していきます。あえて正規名称で記載してますので、辛いかもしれませんが、次章から詳細に説明していきます。</p>
--- 
-
-<div class="-mt-80 -mb48">
-  <h4>開発環境テンプレート</h4>
-  <ul>
-    <li>gnavi-npm-scripts-boiler-pug</li>
-  </ul>
-</div>
-
-主な構成
-
-- html: 
-  - src/pug/\*\*/*.pug
-  - pug: テンプレートエンジン
-
-- css:
-  - src/scss/\*\*/*.scss
-  - sass: プリプロセッサ
-  - stylelint: css静的検証ツール
-
-- js:
-  - src/js/\*\*/*.js
-  - babel: トランスパイラー
-  - eslint: js静的検証ツール
-
-- webpack: モジュールバンドラー
-  - conf/webpack.js
-
--- 
-
-<div class="-mt-80 -mb48">
-  <h4>開発環境テンプレート</h4>
-  <ul>
-    <li>gulp-boilerplate-switchTask</li>
-  </ul>
-  <p class="-ex-small">※このリポジトリは選択できるようになってますので、gnavi-npm-scripts-boiler-pugとは違うmoduleを記載します。</p>
-</div>
-
-主な構成
-
-- html: 
-  - src/ejs/\*\*/*.ejs
-  - ejs: テンプレートエンジン
-
-- css:
-  - src/postcss/\*\*/*.css
-  - postcss: プリプロセッサ&ポストプロセッサ
-
-- js:
-  - src/js/\*\*/*.js
-  - browserify: モジュールバンドラー
-  - babelify: トランスパイラー
-  - eslint: js静的検証ツール
-
-- gulp: タスクランナー
-  - gulp.babel.js
-  - gulp/task/*.js
 
 ---
 
@@ -385,7 +276,7 @@ gulpとは (特徴)
 </div>
 
 gulp(gulpfile.js)の設定方法①  
-タスクの登録について(git clone http://gitlab102.gnavi.co.jp/skilltrans-fe/skilltrans-fe_201904_test.git)
+タスクの登録について
 
 
 ```js
@@ -756,7 +647,7 @@ search_type: rs
   </ul>
 </div>
 
-・記法(ejs/pages/sample.ejs)
+・記法
 
 ```html
   <!DOCTYPE html>
@@ -790,7 +681,7 @@ search_type: rs
   </ul>
 </div>
 
-・記法(ejs/pages/sample.ejs)
+・記法
 
 <%  %>とすればjavascriptも記載できますので...
 ```html
@@ -814,7 +705,7 @@ search_type: rs
   </ul>
 </div>
 
-記法(gnavi-npm-scripts-boiler-pugリポジトリのsrc/pug/layout/default.pug)
+記法
 ```html
 doctype html  ①
 html(lang=ja) ②
@@ -838,17 +729,12 @@ html(lang=ja) ②
   <ul>
     <li>sass</li>
     <li>cssMqpacker</li>
-<<<<<<< HEAD
     <li>autoprefixer</li>
-=======
-    <li>autoprifixer</li>
->>>>>>> feature/tanaka-kan
     <li>cssnano</li>
   </ul>
 </div>
 
 CSSのビルドについて  
-gulp-boilerplate-switchTask/gulp/task/sass.js
 
 -- 
 
@@ -862,7 +748,6 @@ gulp-boilerplate-switchTask/gulp/task/sass.js
 <img src="./img/sass.png" width="50">
 
 <p>cssをモジュール毎にscssファイルとして管理し、最終的には１つのcssファイルとして出力される</p>
-<p>先ほど、forEachに書き直していただいたところは、sass/module/_panel.scssとして定義されており、lp.scssの26行目でimportされているのがわかると思います。</p>
 <img src="./img/panel.png" width="200">
 
 -- 
@@ -941,7 +826,7 @@ gulp-boilerplate-switchTask/gulp/task/sass.js
 <p>css内の不要なインデントや改行、コメントアウトなどを全て削除して、1行のcssファイルとして出力されます。</p>
 <p class="fragment -mt24">cssの圧縮でそんなに変わるのか？</p>
 <p class="fragment">かなり容量を削減することができます。</p>
-<p class="fragment">tmp/css/lp.css: <span class="-b">50 KB</span>, dist/css/lp.css: <span class="-b">19 KB</span></p>
+<p class="fragment">lp.css: <span class="-b">50 KB</span>, lp.css: <span class="-b">19 KB</span></p>
 
 <p class="fragment -mt24">これだけ多くのnpmモジュールによる変更をした上で、1つのcssをお渡ししていたことを覚えていただければと思います。</p>
 
@@ -1018,8 +903,6 @@ var fuga = function() {
 <p>モジュール化されたejsファイル, scssファイル, jsファイルに変更を加えると、ブラウザが自動的に読み込み直されていませんでしたか？</p>
 <p>それがwatch, browsersyncの恩恵です。</p>
 
-<p>skilltrans-fe_201904_testリポジトリのgulpfile.js</p>
-
 -- 
 
 <div class="-mt-80 -mb48">
@@ -1029,7 +912,7 @@ var fuga = function() {
   </ul>
 </div>
 
-<p>変更を検知して、タスクを実行するモジュールです。(gulpfile.js334行目)</p>
+<p>変更を検知して、タスクを実行するモジュールです。(gulpfile.js)</p>
 
 ```js
 /*

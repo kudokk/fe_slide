@@ -134,7 +134,7 @@ fetch(googleBooksAPI)
 ```shell
 npm i axios
 ```
-インストール後、test_transfer.jsに下記を貼り付け、実行してください。
+
 ```js
 // npm i axios した後、import文で、axiosの使用を宣言できます。
 import axios from 'axios'

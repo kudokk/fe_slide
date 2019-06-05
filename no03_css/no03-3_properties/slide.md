@@ -21,7 +21,6 @@
 
 余白を表現するCSSプロパティ。
 
-<p class="-mt24">skilltrans-fe_201904_testリポジトリのsrc/sass/module/_testTransfer.scssを使用します。</p>
 ```shell
 npm run dev
 ```

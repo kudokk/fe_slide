@@ -22,9 +22,6 @@
   <li>イベントリスナーとイベント</li>
 </ul>
 <br>
-<p>DOM操作は、skilltrans-fe_201904_testリポジトリのmasterブランチで動作確認をお願いいたします。  
-・html: src/ejs/pages/sample.ejs  
-・js: src/js/test_tranfer.js</p>
 
 ---
 
@@ -547,7 +544,7 @@ clickイベントの制御は、行うことが多いですので、stopPropagat
 -- 
 
 ##### 余裕があれば課題
-環境: skilltrans-fe_201904_testリポジトリ, src/js/test_transfer.js
+
 
 - 課題1  
 button,button2というボタンが用意されていますが、<br>「button」をクリックしたら、「button2」が「ボタン」に変更されるようにしてください。<br>要素のテキストは 要素.innerText で取得できます。
