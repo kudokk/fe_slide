@@ -1,31 +1,13 @@
-# フロントエンド検証環境
-https://frontend.gnavi.co.jp/skilltrans-fe_slide/
-
-# jenkins
-http://172.30.80.25:9050/jenkins/job/skilltrans-fe_slide_deploy/
-
-# 実施目的
-- 外注コストの削減
-- フロントエンドグループと相談するための共通言語を作る
-
-# フロントエンドを学ぶメリット
-
-
-# これからやる主なこと
-- フロントエンドの開発環境
-- JavaScript
-- CSS設計
-- HTMLの正しい書き方
-- 画像の最適化
+# 確認方法
+```
+git clone https://github.com/kudokk/fe_slide.git
+npm i
+npm run dev
+```
 
 # やらないこと
 - SEOの詳細
 - JSフレームワーク
-
-# フロントエンドの世界観
-- floatの時代
-- jQueryの時代
-- JSフレームワークの時代(今ここ)
 
 ### 1日目
 
